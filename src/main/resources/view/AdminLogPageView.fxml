@@ -11,9 +11,9 @@
 
 <AnchorPane fx:id="adminLogPage" prefHeight="750.0" prefWidth="1500.0" style="-fx-background-color: #00a07c;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.serenity.hospital.ormcoursework.controller.AdminLogPageViewController">
    <children>
-      <ImageView fx:id="AdminLogPage" fitHeight="655.0" fitWidth="615.0" layoutX="29.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="AdminLogPage" fitHeight="655.0" fitWidth="615.0" layoutX="82.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets/singup.jpg" />
+            <Image url="@../assets/singup.png" />
          </image>
       </ImageView>
       <Label layoutX="1036.0" layoutY="77.0" style="-fx-text-fill: #ffffff;" text="Admin SignIn">
