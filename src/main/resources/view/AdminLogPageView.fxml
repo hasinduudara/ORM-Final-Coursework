@@ -2,37 +2,73 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="adminLogPage" prefHeight="750.0" prefWidth="1500.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.serenity.hospital.ormcoursework.controller.AdminLogPageViewController">
+<AnchorPane fx:id="adminLogPage" prefHeight="750.0" prefWidth="1500.0" style="-fx-background-color: #00a07c;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.serenity.hospital.ormcoursework.controller.AdminLogPageViewController">
    <children>
-      <ImageView fitHeight="748.0" fitWidth="622.0" layoutX="-2.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="AdminLogPage" fitHeight="655.0" fitWidth="615.0" layoutX="29.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets/admin%20img%201.jpg" />
+            <Image url="@../assets/singup.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="888.0" layoutY="150.0" text="Do you have an account?">
+      <Label layoutX="1036.0" layoutY="77.0" style="-fx-text-fill: #ffffff;" text="Admin SignIn">
          <font>
-            <Font name="System Bold Italic" size="30.0" />
+            <Font name="System Bold Italic" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="btnAdminGoLogPage" layoutX="911.0" layoutY="214.0" mnemonicParsing="false" onAction="#btnAdminGoLogPageOnAction" style="-fx-background-color: #008fff; -fx-text-fill: #ffffff; -fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #000000;" text="Log in to your account">
-         <font>
-            <Font name="System Bold" size="27.0" />
-         </font>
-      </Button>
-      <Label layoutX="906.0" layoutY="379.0" text="Don't have an account?">
-         <font>
-            <Font name="System Bold Italic" size="30.0" />
-         </font>
-      </Label>
-      <Button fx:id="btnAdminGoAccCreatePage" layoutX="940.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnAdminGoAccCreatePageOnAction" style="-fx-background-color: #00c545; -fx-text-fill: #ffffff; -fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #000000;" text="Create an account">
-         <font>
-            <Font name="System Bold" size="27.0" />
-         </font>
-      </Button>
+      <AnchorPane layoutX="788.0" layoutY="144.0" prefHeight="526.0" prefWidth="610.0" style="-fx-border-color: #ffffff; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-width: 2;">
+         <children>
+            <Label layoutX="97.0" layoutY="52.0" style="-fx-text-fill: #ffffff;" text="User Name:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtAdminLogUserName" layoutX="231.0" layoutY="42.0" prefHeight="46.0" prefWidth="305.0" promptText="Enter User Name" style="-fx-background-radius: 30; -fx-border-color: #000000; -fx-border-radius: 30;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="95.0" layoutY="139.0" style="-fx-text-fill: #ffffff;" text="Password:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="214.0" layoutY="401.0" style="-fx-text-fill: #ffffff;" text="Don't have an account?">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnAdminGoAccCreatePage" layoutX="242.0" layoutY="438.0" mnemonicParsing="false" onAction="#btnAdminGoAccCreatePageOnAction" style="-fx-background-color: #00c545; -fx-text-fill: #ffffff; -fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #ffffff;" text="Create an account">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Label layoutX="242.0" layoutY="298.0" style="-fx-text-fill: #ffffff;" text="Forget Password">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnAdminLogForgetPass" layoutX="243.0" layoutY="334.0" mnemonicParsing="false" onAction="#btnAdminLogForgetPassOnAction" style="-fx-background-color: red; -fx-text-fill: #ffffff; -fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #ffffff;" text="Forget Password">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAdminSignIn" layoutX="243.0" layoutY="217.0" mnemonicParsing="false" onAction="#btnAdminSignInOnAction" style="-fx-background-color: #008fff; -fx-text-fill: #ffffff; -fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #ffffff;" text="Sign In Account">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <PasswordField fx:id="psAdminLogPassword" layoutX="232.0" layoutY="127.0" prefHeight="46.0" prefWidth="305.0" promptText="Enter Password" style="-fx-background-radius: 30; -fx-border-color: #000000; -fx-border-radius: 30;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </PasswordField>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

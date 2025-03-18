@@ -3,9 +3,15 @@ package com.serenity.hospital.ormcoursework.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
 public class AdminLogPageViewController {
+
+    @FXML
+    private ImageView AdminLogPage;
 
     @FXML
     private AnchorPane adminLogPage;
@@ -14,7 +20,16 @@ public class AdminLogPageViewController {
     private Button btnAdminGoAccCreatePage;
 
     @FXML
-    private Button btnAdminGoLogPage;
+    private Button btnAdminLogForgetPass;
+
+    @FXML
+    private Button btnAdminSignIn;
+
+    @FXML
+    private PasswordField psAdminLogPassword;
+
+    @FXML
+    private TextField txtAdminLogUserName;
 
     @FXML
     void btnAdminGoAccCreatePageOnAction(ActionEvent event) {
@@ -22,7 +37,12 @@ public class AdminLogPageViewController {
     }
 
     @FXML
-    void btnAdminGoLogPageOnAction(ActionEvent event) {
+    void btnAdminLogForgetPassOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnAdminSignInOnAction(ActionEvent event) {
 
     }
 
