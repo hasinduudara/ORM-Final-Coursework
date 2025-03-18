@@ -16,14 +16,14 @@
             <Image url="@../assets/Receptionist%20img.png" />
          </image>
       </ImageView>
-      <Label layoutX="1046.0" layoutY="87.0" style="-fx-text-fill: #ffffff;" text="Receptionist SignIn">
+      <Label layoutX="991.0" layoutY="87.0" style="-fx-text-fill: #ffffff;" text="Receptionist SignIn">
          <font>
-            <Font name="System Bold Italic" size="18.0" />
+            <Font name="System Bold Italic" size="25.0" />
          </font>
       </Label>
-      <AnchorPane layoutX="798.0" layoutY="154.0" prefHeight="526.0" prefWidth="610.0" style="-fx-border-color: #ffffff; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-width: 2;">
+      <AnchorPane layoutX="798.0" layoutY="154.0" prefHeight="526.0" prefWidth="610.0" style="-fx-border-color: #000000; -fx-background-radius: 30; -fx-border-radius: 30; -fx-background-color: #ffffff;">
          <children>
-            <Label layoutX="97.0" layoutY="52.0" style="-fx-text-fill: #ffffff;" text="User Name:">
+            <Label layoutX="97.0" layoutY="52.0" text="User Name:">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -33,32 +33,32 @@
                   <Font size="18.0" />
                </font>
             </TextField>
-            <Label layoutX="95.0" layoutY="139.0" style="-fx-text-fill: #ffffff;" text="Password:">
+            <Label layoutX="95.0" layoutY="139.0" text="Password:">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="214.0" layoutY="401.0" style="-fx-text-fill: #ffffff;" text="Don't have an account?">
+            <Label layoutX="214.0" layoutY="401.0" text="Don't have an account?">
                <font>
                   <Font name="System Bold Italic" size="18.0" />
                </font>
             </Label>
-            <Button fx:id="btnReceptionistGoAccCreatePage" layoutX="242.0" layoutY="438.0" mnemonicParsing="false" onAction="#btnReceptionistGoAccCreatePageOnAction" style="-fx-background-color: #00c545; -fx-text-fill: #ffffff; -fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #ffffff;" text="Create an account">
+            <Button fx:id="btnReceptionistGoAccCreatePage" layoutX="242.0" layoutY="438.0" mnemonicParsing="false" onAction="#btnReceptionistGoAccCreatePageOnAction" style="-fx-background-color: #00c545; -fx-text-fill: #ffffff; -fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #000000;" text="Create an account">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Button>
-            <Label layoutX="242.0" layoutY="298.0" style="-fx-text-fill: #ffffff;" text="Forget Password">
+            <Label layoutX="242.0" layoutY="298.0" text="Forget Password">
                <font>
                   <Font name="System Bold Italic" size="18.0" />
                </font>
             </Label>
-            <Button fx:id="btnReceptionistLogForgetPass" layoutX="243.0" layoutY="334.0" mnemonicParsing="false" onAction="#btnReceptionistLogForgetPassOnAction" style="-fx-background-color: red; -fx-text-fill: #ffffff; -fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #ffffff;" text="Forget Password">
+            <Button fx:id="btnReceptionistLogForgetPass" layoutX="243.0" layoutY="334.0" mnemonicParsing="false" onAction="#btnReceptionistLogForgetPassOnAction" style="-fx-background-color: red; -fx-text-fill: #ffffff; -fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #000000;" text="Forget Password">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Button>
-            <Button fx:id="btnReceptionistSignIn" layoutX="243.0" layoutY="217.0" mnemonicParsing="false" onAction="#btnReceptionistSignInOnAction" style="-fx-background-color: #008fff; -fx-text-fill: #ffffff; -fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #ffffff;" text="Sign In Account">
+            <Button fx:id="btnReceptionistSignIn" layoutX="243.0" layoutY="217.0" mnemonicParsing="false" onAction="#btnReceptionistSignInOnAction" style="-fx-background-color: #008fff; -fx-text-fill: #ffffff; -fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #000000;" text="Sign In Account">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
