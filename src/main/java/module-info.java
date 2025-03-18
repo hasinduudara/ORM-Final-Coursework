@@ -5,6 +5,7 @@ module com.serenity.hospital.ormcoursework {
     requires com.jfoenix;
     requires net.sf.jasperreports.core;
     requires java.mail;
+    requires java.sql;
 
     requires org.hibernate.orm.core;
     requires jakarta.persistence;
