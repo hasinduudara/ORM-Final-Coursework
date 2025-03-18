@@ -7,10 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="adminLogPage" prefHeight="750.0" prefWidth="1500.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.serenity.hospital.ormcoursework.controller.AdminLogPageViewController">
    <children>
-      <ImageView fitHeight="748.0" fitWidth="589.0" layoutX="-2.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="748.0" fitWidth="622.0" layoutX="-2.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/admin%20img%201.jpg" />
          </image>
@@ -20,7 +19,7 @@
             <Font name="System Bold Italic" size="30.0" />
          </font>
       </Label>
-      <Button fx:id="btnAdminGoLogPage" layoutX="911.0" layoutY="214.0" mnemonicParsing="false" onAction="#btnAdminGoLogPageOnAction" style="-fx-background-color: #008fff; -fx-text-fill: #ffffff; -fx-border-radius: 30; -fx-background-radius: 30;" text="Log in to your account">
+      <Button fx:id="btnAdminGoLogPage" layoutX="911.0" layoutY="214.0" mnemonicParsing="false" onAction="#btnAdminGoLogPageOnAction" style="-fx-background-color: #008fff; -fx-text-fill: #ffffff; -fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #000000;" text="Log in to your account">
          <font>
             <Font name="System Bold" size="27.0" />
          </font>
@@ -30,7 +29,7 @@
             <Font name="System Bold Italic" size="30.0" />
          </font>
       </Label>
-      <Button fx:id="btnAdminGoAccCreatePage" layoutX="940.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnAdminGoAccCreatePageOnAction" style="-fx-background-color: #00c545; -fx-text-fill: #ffffff; -fx-border-radius: 30; -fx-background-radius: 30;" text="Create an account">
+      <Button fx:id="btnAdminGoAccCreatePage" layoutX="940.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnAdminGoAccCreatePageOnAction" style="-fx-background-color: #00c545; -fx-text-fill: #ffffff; -fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #000000;" text="Create an account">
          <font>
             <Font name="System Bold" size="27.0" />
          </font>

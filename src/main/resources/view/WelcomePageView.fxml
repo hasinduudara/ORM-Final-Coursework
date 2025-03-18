@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="welcomePage" prefHeight="750.0" prefWidth="1500.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.serenity.hospital.ormcoursework.controller.WelcomePageController">
    <children>
       <ImageView fitHeight="755.0" fitWidth="642.0" layoutX="-4.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
@@ -37,12 +36,12 @@
                   <Font name="System Bold Italic" size="30.0" />
                </font>
             </Label>
-            <Button fx:id="btnAdmin" layoutX="116.0" layoutY="455.0" mnemonicParsing="false" onAction="#btnAdminOnAction" style="-fx-pref-width: 150;" text="Admin">
+            <Button fx:id="btnAdmin" layoutX="116.0" layoutY="455.0" mnemonicParsing="false" onAction="#btnAdminOnAction" style="-fx-pref-width: 150; -fx-background-color: #0070ff; -fx-background-radius: 30; -fx-border-color: #000000; -fx-border-radius: 30; -fx-text-fill: #ffffff;" text="Admin">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button fx:id="btnReceptionist" layoutX="329.0" layoutY="455.0" mnemonicParsing="false" onAction="#btnReceptionistOnAction" text="Receptionist">
+            <Button fx:id="btnReceptionist" layoutX="329.0" layoutY="455.0" mnemonicParsing="false" onAction="#btnReceptionistOnAction" style="-fx-background-color: #00c545; -fx-background-radius: 30; -fx-text-fill: #ffffff; -fx-border-color: #000000; -fx-border-radius: 30;" text="Receptionist">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
