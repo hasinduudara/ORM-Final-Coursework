@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="receptionistLogPage" prefHeight="750.0" prefWidth="1500.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.serenity.hospital.ormcoursework.controller.ReceptionistLogPageViewController">
+   <children>
+      <ImageView fitHeight="488.0" fitWidth="882.0" layoutX="8.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Receptionist%20img.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="905.0" layoutY="169.0" text="Do you have an account?">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnReceptionistGoLogPage" layoutX="928.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnReceptionistGoLogPageOnAction" style="-fx-background-color: #008fff; -fx-text-fill: #ffffff; -fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #000000;" text="Log in to your account">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Button>
+      <Label layoutX="923.0" layoutY="398.0" text="Don't have an account?">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnReceptionistGoAccCreatePage" layoutX="957.0" layoutY="459.0" mnemonicParsing="false" onAction="#btnReceptionistGoAccCreatePageOnAction" style="-fx-background-color: #00c545; -fx-text-fill: #ffffff; -fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #000000;" text="Create an account">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
