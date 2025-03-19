@@ -41,8 +41,9 @@ public class AdminLogPageViewController {
     }
 
     @FXML
-    void btnAdminLogForgetPassOnAction(ActionEvent event) {
-
+    void btnAdminLogForgetPassOnAction(ActionEvent event) throws IOException {
+        adminLogPage.getChildren().clear();
+        adminLogPage.getChildren().add(FXMLLoader.load(getClass().getResource("/view/AdminForgetPasswordPageView.fxml")));
     }
 
     @FXML
