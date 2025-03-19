@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="welcomePage" prefHeight="750.0" prefWidth="1500.0" style="-fx-background-color: #00a07c;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.serenity.hospital.ormcoursework.controller.WelcomePageController">
+<AnchorPane fx:id="welcomePage" prefHeight="750.0" prefWidth="1500.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.serenity.hospital.ormcoursework.controller.WelcomePageController">
    <children>
       <ImageView fitHeight="755.0" fitWidth="642.0" layoutX="-4.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
          <image>

@@ -9,14 +9,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="adminLogPage" prefHeight="750.0" prefWidth="1500.0" style="-fx-background-color: #00a07c;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.serenity.hospital.ormcoursework.controller.AdminLogPageViewController">
+<AnchorPane fx:id="adminLogPage" prefHeight="750.0" prefWidth="1500.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.serenity.hospital.ormcoursework.controller.AdminLogPageViewController">
    <children>
-      <ImageView fx:id="AdminLogPage" fitHeight="655.0" fitWidth="615.0" layoutX="82.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="AdminLogPage" fitHeight="528.0" fitWidth="732.0" layoutX="24.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets/singup.png" />
+            <Image url="@../assets/maint.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="1013.0" layoutY="73.0" style="-fx-text-fill: #ffffff;" text="Admin SignIn">
+      <Label layoutX="1013.0" layoutY="73.0" style="-fx-text-fill: #000000;" text="Admin SignIn">
          <font>
             <Font name="System Bold Italic" size="25.0" />
          </font>
