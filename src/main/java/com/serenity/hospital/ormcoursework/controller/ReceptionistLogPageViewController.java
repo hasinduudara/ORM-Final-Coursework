@@ -2,10 +2,13 @@ package com.serenity.hospital.ormcoursework.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+
+import java.io.IOException;
 
 public class ReceptionistLogPageViewController {
 
@@ -33,8 +36,9 @@ public class ReceptionistLogPageViewController {
     }
 
     @FXML
-    void btnReceptionistLogForgetPassOnAction(ActionEvent event) {
-
+    void btnReceptionistLogForgetPassOnAction(ActionEvent event) throws IOException {
+        receptionistLogPage.getChildren().clear();
+        receptionistLogPage.getChildren().add(FXMLLoader.load(getClass().getResource("/view/ReceptionistForgetPasswordPageView.fxml")));
     }
 
     @FXML
