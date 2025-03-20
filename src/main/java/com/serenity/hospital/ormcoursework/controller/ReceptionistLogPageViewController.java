@@ -31,8 +31,9 @@ public class ReceptionistLogPageViewController {
     private TextField txtReceptionistLogUserName;
 
     @FXML
-    void btnReceptionistGoAccCreatePageOnAction(ActionEvent event) {
-
+    void btnReceptionistGoAccCreatePageOnAction(ActionEvent event) throws IOException {
+        receptionistLogPage.getChildren().clear();
+        receptionistLogPage.getChildren().add(FXMLLoader.load(getClass().getResource("/view/ReceptionistSignUpPageView.fxml")));
     }
 
     @FXML
