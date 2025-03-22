@@ -1,0 +1,15 @@
+.panes {
+    -fx-background-color: #0046ca;
+    -fx-background-radius: 50 0 50 0;
+    -fx-transition: background-color 0.3s ease;
+}
+
+.cardDesc {
+    -fx-font-size: 9;
+    -fx-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+.panes:hover {
+    -fx-background-color: #0038a0;
+}

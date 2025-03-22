@@ -8,18 +8,18 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="AdminDashboard" prefHeight="750.0" prefWidth="1500.0" stylesheets="@../css/admin-card-styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.serenity.hospital.ormcoursework.controller.AdminDashboardPageViewController">
+<AnchorPane fx:id="receptionistDashboardPage" prefHeight="750.0" prefWidth="1500.0" stylesheets="@../css/receptionist-card-styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.serenity.hospital.ormcoursework.controller.ReceptionistDashboardPageController">
    <children>
-      <AnchorPane layoutX="45.0" layoutY="19.0" prefHeight="310.0" prefWidth="1410.0" style="-fx-background-color: #006d49; -fx-background-radius: 30;">
+      <AnchorPane layoutX="55.0" layoutY="29.0" prefHeight="310.0" prefWidth="1410.0" style="-fx-background-color: #0046ca; -fx-background-radius: 30;">
          <children>
-            <Label layoutX="171.0" layoutY="-21.0" prefHeight="234.0" prefWidth="1069.0" style="-fx-text-fill: #E09B41;" text=" Serenity Hub">
+            <Label layoutX="171.0" layoutY="-21.0" prefHeight="234.0" prefWidth="1069.0" style="-fx-text-fill: #FFD700;" text=" Serenity Hub">
                <font>
                   <Font name="System Bold" size="160.0" />
                </font>
             </Label>
             <ImageView fitHeight="308.0" fitWidth="328.0" layoutX="546.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../assets/doctore%20png.png" />
+                  <Image url="@../assets/Receptionist%20image.png" />
                </image>
             </ImageView>
             <Label layoutX="49.0" layoutY="222.0" prefHeight="35.0" prefWidth="608.0" style="-fx-text-fill: #ffffff;" text="The Serenity Mental Health Therapy Center software">
@@ -44,14 +44,14 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <Pane fx:id="panes1" layoutX="26.0" layoutY="420.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
+      <Pane fx:id="panes1" layoutX="36.0" layoutY="430.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
          <children>
-            <Label layoutX="18.0" layoutY="90.0" style="-fx-text-fill: #E09B41;" text="Therapist">
+            <Label layoutX="18.0" layoutY="90.0" style="-fx-text-fill: #FFD700;" text="Therapist">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
             </Label>
-            <Label layoutX="18.0" layoutY="120.0" style="-fx-text-fill: #E09B41;" text="Management">
+            <Label layoutX="18.0" layoutY="120.0" style="-fx-text-fill: #FFD700;" text="Management">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
@@ -66,19 +66,19 @@
             <Text fx:id="cardDesc111" layoutX="19.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardDesc" text="for smooth operations." />
             <ImageView fx:id="adminTherapistManagement" fitHeight="44.0" fitWidth="48.0" layoutX="19.0" layoutY="250.0" onMouseClicked="#adminTherapistManagementOnMouseClicked" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../assets/next%20icon.png" />
+                  <Image url="@../assets/Receptionist%20next%20btn.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
-      <Pane fx:id="panes11" layoutX="270.0" layoutY="420.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
+      <Pane fx:id="panes11" layoutX="280.0" layoutY="430.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
          <children>
-            <Label layoutX="18.0" layoutY="90.0" style="-fx-text-fill: #E09B41;" text="Therapy">
+            <Label layoutX="18.0" layoutY="90.0" style="-fx-text-fill: #FFD700;" text="Therapy">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
             </Label>
-            <Label layoutX="18.0" layoutY="150.0" style="-fx-text-fill: #E09B41;" text="Management">
+            <Label layoutX="18.0" layoutY="150.0" style="-fx-text-fill: #FFD700;" text="Management">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
@@ -93,24 +93,24 @@
             <Text fx:id="cardDesc1111" layoutX="19.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardDesc" text="and resources efficiently." />
             <ImageView fx:id="adminTherapistProgramManagement" fitHeight="44.0" fitWidth="48.0" layoutX="19.0" layoutY="250.0" onMouseClicked="#adminTherapistProgramManagementOnMouseClicked" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../assets/next%20icon.png" />
+                  <Image url="@../assets/Receptionist%20next%20btn.png" />
                </image>
             </ImageView>
-            <Label layoutX="18.0" layoutY="120.0" style="-fx-text-fill: #E09B41;" text="Program">
+            <Label layoutX="18.0" layoutY="120.0" style="-fx-text-fill: #FFD700;" text="Program">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <Pane fx:id="panes111" layoutX="515.0" layoutY="420.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
+      <Pane fx:id="panes111" layoutX="525.0" layoutY="430.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
          <children>
-            <Label layoutX="18.0" layoutY="90.0" style="-fx-text-fill: #E09B41;" text="Patient">
+            <Label layoutX="18.0" layoutY="90.0" style="-fx-text-fill: #FFD700;" text="Patient">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
             </Label>
-            <Label layoutX="18.0" layoutY="120.0" style="-fx-text-fill: #E09B41;" text="Management">
+            <Label layoutX="18.0" layoutY="120.0" style="-fx-text-fill: #FFD700;" text="Management">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
@@ -125,19 +125,19 @@
             <Text fx:id="cardDesc11111" layoutX="19.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardDesc" text="medical records, and treatment plans." />
             <ImageView fx:id="adminPatientManagement" fitHeight="44.0" fitWidth="48.0" layoutX="19.0" layoutY="250.0" onMouseClicked="#adminPatientManagementOnMouseClicked" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../assets/next%20icon.png" />
+                  <Image url="@../assets/Receptionist%20next%20btn.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
-      <Pane fx:id="panes1111" layoutX="760.0" layoutY="420.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
+      <Pane fx:id="panes1111" layoutX="770.0" layoutY="430.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
          <children>
-            <Label layoutX="18.0" layoutY="90.0" style="-fx-text-fill: #E09B41;" text="Therapy Session">
+            <Label layoutX="18.0" layoutY="90.0" style="-fx-text-fill: #FFD700;" text="Therapy Session">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
             </Label>
-            <Label layoutX="18.0" layoutY="120.0" style="-fx-text-fill: #E09B41;" text="Scheduling">
+            <Label layoutX="18.0" layoutY="120.0" style="-fx-text-fill: #FFD700;" text="Scheduling">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
@@ -152,19 +152,19 @@
             <Text fx:id="cardDesc111111" layoutX="19.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardDesc" text="therapy appointments clients &amp; therapists." />
             <ImageView fx:id="adminTherapySession" fitHeight="44.0" fitWidth="48.0" layoutX="19.0" layoutY="250.0" onMouseClicked="#adminTherapySessionOnMouseClicked" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../assets/next%20icon.png" />
+                  <Image url="@../assets/Receptionist%20next%20btn.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
-      <Pane fx:id="panes11111" layoutX="1008.0" layoutY="420.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
+      <Pane fx:id="panes11111" layoutX="1018.0" layoutY="430.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
          <children>
-            <Label layoutX="18.0" layoutY="90.0" style="-fx-text-fill: #E09B41;" text="Payment &amp;">
+            <Label layoutX="18.0" layoutY="90.0" style="-fx-text-fill: #FFD700;" text="Payment &amp;">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
             </Label>
-            <Label layoutX="18.0" layoutY="120.0" style="-fx-text-fill: #E09B41;" text="Invoice">
+            <Label layoutX="18.0" layoutY="120.0" style="-fx-text-fill: #FFD700;" text="Invoice">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
@@ -179,19 +179,19 @@
             <Text fx:id="cardDesc1111111" layoutX="19.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardDesc" text="with automated solutions." />
             <ImageView fx:id="adminPayment" fitHeight="44.0" fitWidth="48.0" layoutX="19.0" layoutY="250.0" onMouseClicked="#adminPaymentOnMouseClicked" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../assets/next%20icon.png" />
+                  <Image url="@../assets/Receptionist%20next%20btn.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
-      <Pane fx:id="panes111111" layoutX="1253.0" layoutY="420.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
+      <Pane fx:id="panes111111" layoutX="1263.0" layoutY="430.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
          <children>
-            <Label layoutX="18.0" layoutY="90.0" style="-fx-text-fill: #E09B41;" text="Reporting &amp;">
+            <Label layoutX="18.0" layoutY="90.0" style="-fx-text-fill: #FFD700;" text="Reporting &amp;">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
             </Label>
-            <Label layoutX="18.0" layoutY="120.0" style="-fx-text-fill: #E09B41;" text="Analytics">
+            <Label layoutX="18.0" layoutY="120.0" style="-fx-text-fill: #FFD700;" text="Analytics">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
@@ -206,13 +206,13 @@
             <Text fx:id="cardDesc11111111" layoutX="19.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardDesc" text="support decision-making." />
             <ImageView fx:id="adminReporting" fitHeight="44.0" fitWidth="48.0" layoutX="19.0" layoutY="250.0" onMouseClicked="#adminReportingOnMouseClicked" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../assets/next%20icon.png" />
+                  <Image url="@../assets/Receptionist%20next%20btn.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
-      <Label layoutX="497.0" layoutY="350.0" prefHeight="50.0" prefWidth="480.0" style="-fx-background-color: #006d49; -fx-background-radius: 30;" />
-      <Label layoutX="547.0" layoutY="357.0" style="-fx-text-fill: #ffffff;" text=" Serenity Hub Admin Dashboard">
+      <Label layoutX="507.0" layoutY="360.0" prefHeight="50.0" prefWidth="480.0" style="-fx-background-color: #0046ca; -fx-background-radius: 30;" />
+      <Label layoutX="557.0" layoutY="367.0" style="-fx-text-fill: #FFD700;" text=" Serenity Hub Admin Dashboard">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
