@@ -12,7 +12,7 @@ public class AppInitializer extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/WelcomePageView.fxml"));
-        primaryStage.setTitle("The Serenity Mental Health Therapy Center");
+        primaryStage.setTitle("Serenity Hub ");
         Parent root = loader.load();
         primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/assets/icon-helth.png")));
         Scene scene = new Scene(root);

@@ -47,8 +47,9 @@ public class AdminLogPageViewController {
     }
 
     @FXML
-    void btnAdminSignInOnAction(ActionEvent event) {
-
+    void btnAdminSignInOnAction(ActionEvent event) throws IOException {
+        adminLogPage.getChildren().clear();
+        adminLogPage.getChildren().add(FXMLLoader.load(getClass().getResource("/view/AdminDashboardPageView.fxml")));
     }
 
 }

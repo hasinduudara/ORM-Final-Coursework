@@ -44,8 +44,9 @@ public class AdminSignUpPageViewController {
     }
 
     @FXML
-    void btnAdminSignUpCreateAccOnAction(ActionEvent event) {
-
+    void btnAdminSignUpCreateAccOnAction(ActionEvent event) throws IOException {
+        adminSignUpPage.getChildren().clear();
+        adminSignUpPage.getChildren().add(FXMLLoader.load(getClass().getResource("/view/AdminDashboardPageView.fxml")));
     }
 
 }
