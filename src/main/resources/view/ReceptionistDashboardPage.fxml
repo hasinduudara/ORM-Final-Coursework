@@ -10,7 +10,7 @@
 
 <AnchorPane fx:id="receptionistDashboardPage" prefHeight="750.0" prefWidth="1500.0" stylesheets="@../css/receptionist-card-styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.serenity.hospital.ormcoursework.controller.ReceptionistDashboardPageController">
    <children>
-      <AnchorPane layoutX="55.0" layoutY="29.0" prefHeight="310.0" prefWidth="1410.0" style="-fx-background-color: #0046ca; -fx-background-radius: 30;">
+      <AnchorPane layoutX="56.0" layoutY="19.0" prefHeight="310.0" prefWidth="1410.0" style="-fx-background-color: #0046ca; -fx-background-radius: 30;">
          <children>
             <Label layoutX="171.0" layoutY="-21.0" prefHeight="234.0" prefWidth="1069.0" style="-fx-text-fill: #FFD700;" text=" Serenity Hub">
                <font>
@@ -44,7 +44,7 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <Pane fx:id="panes1" layoutX="36.0" layoutY="430.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
+      <Pane fx:id="panes1" layoutX="37.0" layoutY="420.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
          <children>
             <Label layoutX="18.0" layoutY="90.0" style="-fx-text-fill: #FFD700;" text="Therapist">
                <font>
@@ -71,7 +71,7 @@
             </ImageView>
          </children>
       </Pane>
-      <Pane fx:id="panes11" layoutX="280.0" layoutY="430.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
+      <Pane fx:id="panes11" layoutX="281.0" layoutY="420.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
          <children>
             <Label layoutX="18.0" layoutY="90.0" style="-fx-text-fill: #FFD700;" text="Therapy">
                <font>
@@ -103,7 +103,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane fx:id="panes111" layoutX="525.0" layoutY="430.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
+      <Pane fx:id="panes111" layoutX="526.0" layoutY="420.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
          <children>
             <Label layoutX="18.0" layoutY="90.0" style="-fx-text-fill: #FFD700;" text="Patient">
                <font>
@@ -130,7 +130,7 @@
             </ImageView>
          </children>
       </Pane>
-      <Pane fx:id="panes1111" layoutX="770.0" layoutY="430.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
+      <Pane fx:id="panes1111" layoutX="771.0" layoutY="420.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
          <children>
             <Label layoutX="18.0" layoutY="90.0" style="-fx-text-fill: #FFD700;" text="Therapy Session">
                <font>
@@ -157,7 +157,7 @@
             </ImageView>
          </children>
       </Pane>
-      <Pane fx:id="panes11111" layoutX="1018.0" layoutY="430.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
+      <Pane fx:id="panes11111" layoutX="1019.0" layoutY="420.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
          <children>
             <Label layoutX="18.0" layoutY="90.0" style="-fx-text-fill: #FFD700;" text="Payment &amp;">
                <font>
@@ -184,7 +184,7 @@
             </ImageView>
          </children>
       </Pane>
-      <Pane fx:id="panes111111" layoutX="1263.0" layoutY="430.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
+      <Pane fx:id="panes111111" layoutX="1264.0" layoutY="420.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
          <children>
             <Label layoutX="18.0" layoutY="90.0" style="-fx-text-fill: #FFD700;" text="Reporting &amp;">
                <font>
@@ -211,8 +211,8 @@
             </ImageView>
          </children>
       </Pane>
-      <Label layoutX="507.0" layoutY="360.0" prefHeight="50.0" prefWidth="480.0" style="-fx-background-color: #0046ca; -fx-background-radius: 30;" />
-      <Label layoutX="557.0" layoutY="367.0" style="-fx-text-fill: #FFD700;" text=" Serenity Hub Admin Dashboard">
+      <Label layoutX="508.0" layoutY="350.0" prefHeight="50.0" prefWidth="480.0" style="-fx-background-color: #0046ca; -fx-background-radius: 30;" />
+      <Label layoutX="558.0" layoutY="357.0" style="-fx-text-fill: #FFD700;" text=" Serenity Hub Admin Dashboard">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
