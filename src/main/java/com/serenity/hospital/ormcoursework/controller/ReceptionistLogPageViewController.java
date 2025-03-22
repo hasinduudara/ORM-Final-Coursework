@@ -43,8 +43,9 @@ public class ReceptionistLogPageViewController {
     }
 
     @FXML
-    void btnReceptionistSignInOnAction(ActionEvent event) {
-
+    void btnReceptionistSignInOnAction(ActionEvent event) throws IOException {
+        receptionistLogPage.getChildren().clear();
+        receptionistLogPage.getChildren().add(FXMLLoader.load(getClass().getResource("/view/ReceptionistDashboardPage.fxml")));
     }
 
 }
