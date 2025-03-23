@@ -32,78 +32,19 @@
                   <Font name="System Italic" size="20.0" />
                </font>
             </Label>
-            <ImageView fx:id="adminDashboardLogOut" fitHeight="44.0" fitWidth="46.0" layoutX="1318.0" layoutY="226.0" onMouseClicked="#adminDashboardLogOutOnMouseClicked" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="receptionistDashboardLogOut" fitHeight="44.0" fitWidth="46.0" layoutX="1318.0" layoutY="226.0" onMouseClicked="#receptionistDashboardLogOutOnMouseClicked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assets/log%20out.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="adminDashboardSetting" fitHeight="51.0" fitWidth="50.0" layoutX="1254.0" layoutY="223.0" onMouseClicked="#adminDashboardSettingOnMouseClicked" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="receptionistDashboardSetting" fitHeight="51.0" fitWidth="50.0" layoutX="1254.0" layoutY="223.0" onMouseClicked="#receptionistDashboardSettingOnMouseClicked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assets/settin-icon.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
-      <Pane fx:id="panes1" layoutX="37.0" layoutY="420.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
-         <children>
-            <Label layoutX="18.0" layoutY="90.0" style="-fx-text-fill: #FFD700;" text="Therapist">
-               <font>
-                  <Font name="System Bold" size="25.0" />
-               </font>
-            </Label>
-            <Label layoutX="18.0" layoutY="120.0" style="-fx-text-fill: #FFD700;" text="Management">
-               <font>
-                  <Font name="System Bold" size="25.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="66.0" fitWidth="66.0" layoutX="18.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../assets/Therapist.png" />
-               </image>
-            </ImageView>
-            <Text fx:id="cardDesc1" layoutX="19.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardDesc" text="Therapist Management oversees schedules," />
-            <Text fx:id="cardDesc11" layoutX="19.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardDesc" text="availability, and patient assignments" />
-            <Text fx:id="cardDesc111" layoutX="19.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardDesc" text="for smooth operations." />
-            <ImageView fx:id="adminTherapistManagement" fitHeight="44.0" fitWidth="48.0" layoutX="19.0" layoutY="250.0" onMouseClicked="#adminTherapistManagementOnMouseClicked" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../assets/Receptionist%20next%20btn.png" />
-               </image>
-            </ImageView>
-         </children>
-      </Pane>
-      <Pane fx:id="panes11" layoutX="281.0" layoutY="420.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
-         <children>
-            <Label layoutX="18.0" layoutY="90.0" style="-fx-text-fill: #FFD700;" text="Therapy">
-               <font>
-                  <Font name="System Bold" size="25.0" />
-               </font>
-            </Label>
-            <Label layoutX="18.0" layoutY="150.0" style="-fx-text-fill: #FFD700;" text="Management">
-               <font>
-                  <Font name="System Bold" size="25.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="66.0" fitWidth="84.0" layoutX="18.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../assets/Management.png" />
-               </image>
-            </ImageView>
-            <Text fx:id="cardDesc11" layoutX="19.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardDesc" text="herapy Program Management organizes," />
-            <Text fx:id="cardDesc111" layoutX="19.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardDesc" text="tracks, and optimizes therapy sessions," />
-            <Text fx:id="cardDesc1111" layoutX="19.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardDesc" text="and resources efficiently." />
-            <ImageView fx:id="adminTherapistProgramManagement" fitHeight="44.0" fitWidth="48.0" layoutX="19.0" layoutY="250.0" onMouseClicked="#adminTherapistProgramManagementOnMouseClicked" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../assets/Receptionist%20next%20btn.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="18.0" layoutY="120.0" style="-fx-text-fill: #FFD700;" text="Program">
-               <font>
-                  <Font name="System Bold" size="25.0" />
-               </font>
-            </Label>
-         </children>
-      </Pane>
-      <Pane fx:id="panes111" layoutX="526.0" layoutY="420.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
+      <Pane fx:id="panes111" layoutX="268.0" layoutY="420.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
          <children>
             <Label layoutX="18.0" layoutY="90.0" style="-fx-text-fill: #FFD700;" text="Patient">
                <font>
@@ -123,14 +64,14 @@
             <Text fx:id="cardDesc111" layoutX="19.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardDesc" text="Patient Management involves tracking," />
             <Text fx:id="cardDesc1111" layoutX="19.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardDesc" text="organizing, and optimizing patient care," />
             <Text fx:id="cardDesc11111" layoutX="19.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardDesc" text="medical records, and treatment plans." />
-            <ImageView fx:id="adminPatientManagement" fitHeight="44.0" fitWidth="48.0" layoutX="19.0" layoutY="250.0" onMouseClicked="#adminPatientManagementOnMouseClicked" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="receptionistPatientManagement" fitHeight="44.0" fitWidth="48.0" layoutX="19.0" layoutY="250.0" onMouseClicked="#receptionistPatientManagementOnMouseClicked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assets/Receptionist%20next%20btn.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
-      <Pane fx:id="panes1111" layoutX="771.0" layoutY="420.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
+      <Pane fx:id="panes1111" layoutX="513.0" layoutY="420.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
          <children>
             <Label layoutX="18.0" layoutY="90.0" style="-fx-text-fill: #FFD700;" text="Therapy Session">
                <font>
@@ -150,14 +91,14 @@
             <Text fx:id="cardDesc1111" layoutX="19.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardDesc" text="Therapy Session Scheduling simplifies" />
             <Text fx:id="cardDesc11111" layoutX="19.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardDesc" text="booking, managing, and organizing" />
             <Text fx:id="cardDesc111111" layoutX="19.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardDesc" text="therapy appointments clients &amp; therapists." />
-            <ImageView fx:id="adminTherapySession" fitHeight="44.0" fitWidth="48.0" layoutX="19.0" layoutY="250.0" onMouseClicked="#adminTherapySessionOnMouseClicked" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="receptionistTherapySession" fitHeight="44.0" fitWidth="48.0" layoutX="19.0" layoutY="250.0" onMouseClicked="#receptionistTherapySessionOnMouseClicked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assets/Receptionist%20next%20btn.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
-      <Pane fx:id="panes11111" layoutX="1019.0" layoutY="420.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
+      <Pane fx:id="panes11111" layoutX="761.0" layoutY="420.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
          <children>
             <Label layoutX="18.0" layoutY="90.0" style="-fx-text-fill: #FFD700;" text="Payment &amp;">
                <font>
@@ -177,14 +118,14 @@
             <Text fx:id="cardDesc11111" layoutX="19.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardDesc" text="Streamline payment processing," />
             <Text fx:id="cardDesc111111" layoutX="19.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardDesc" text="generate invoices, track transactions," />
             <Text fx:id="cardDesc1111111" layoutX="19.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardDesc" text="with automated solutions." />
-            <ImageView fx:id="adminPayment" fitHeight="44.0" fitWidth="48.0" layoutX="19.0" layoutY="250.0" onMouseClicked="#adminPaymentOnMouseClicked" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="receptionistPayment" fitHeight="44.0" fitWidth="48.0" layoutX="19.0" layoutY="250.0" onMouseClicked="#receptionistPaymentOnMouseClicked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assets/Receptionist%20next%20btn.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
-      <Pane fx:id="panes111111" layoutX="1264.0" layoutY="420.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
+      <Pane fx:id="panes111111" layoutX="1006.0" layoutY="420.0" prefHeight="310.0" prefWidth="221.0" styleClass="panes">
          <children>
             <Label layoutX="18.0" layoutY="90.0" style="-fx-text-fill: #FFD700;" text="Reporting &amp;">
                <font>
@@ -204,7 +145,7 @@
             <Text fx:id="cardDesc111111" layoutX="19.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardDesc" text="Reporting &amp; Analytics involves" />
             <Text fx:id="cardDesc1111111" layoutX="19.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardDesc" text="collecting, analyzing, and visualizing data" />
             <Text fx:id="cardDesc11111111" layoutX="19.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardDesc" text="support decision-making." />
-            <ImageView fx:id="adminReporting" fitHeight="44.0" fitWidth="48.0" layoutX="19.0" layoutY="250.0" onMouseClicked="#adminReportingOnMouseClicked" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="receptionistReporting" fitHeight="44.0" fitWidth="48.0" layoutX="19.0" layoutY="250.0" onMouseClicked="#receptionistReportingOnMouseClicked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assets/Receptionist%20next%20btn.png" />
                </image>

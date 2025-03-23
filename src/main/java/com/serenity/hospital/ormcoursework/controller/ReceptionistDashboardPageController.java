@@ -10,36 +10,6 @@ import javafx.scene.text.Text;
 public class ReceptionistDashboardPageController {
 
     @FXML
-    private ImageView adminDashboardLogOut;
-
-    @FXML
-    private ImageView adminDashboardSetting;
-
-    @FXML
-    private ImageView adminPatientManagement;
-
-    @FXML
-    private ImageView adminPayment;
-
-    @FXML
-    private ImageView adminReporting;
-
-    @FXML
-    private ImageView adminTherapistManagement;
-
-    @FXML
-    private ImageView adminTherapistProgramManagement;
-
-    @FXML
-    private ImageView adminTherapySession;
-
-    @FXML
-    private Text cardDesc1;
-
-    @FXML
-    private Text cardDesc11;
-
-    @FXML
     private Text cardDesc111;
 
     @FXML
@@ -58,12 +28,6 @@ public class ReceptionistDashboardPageController {
     private Text cardDesc11111111;
 
     @FXML
-    private Pane panes1;
-
-    @FXML
-    private Pane panes11;
-
-    @FXML
     private Pane panes111;
 
     @FXML
@@ -76,45 +40,53 @@ public class ReceptionistDashboardPageController {
     private Pane panes111111;
 
     @FXML
+    private ImageView receptionistDashboardLogOut;
+
+    @FXML
     private AnchorPane receptionistDashboardPage;
 
     @FXML
-    void adminDashboardLogOutOnMouseClicked(MouseEvent event) {
+    private ImageView receptionistDashboardSetting;
+
+    @FXML
+    private ImageView receptionistPatientManagement;
+
+    @FXML
+    private ImageView receptionistPayment;
+
+    @FXML
+    private ImageView receptionistReporting;
+
+    @FXML
+    private ImageView receptionistTherapySession;
+
+    @FXML
+    void receptionistDashboardLogOutOnMouseClicked(MouseEvent event) {
 
     }
 
     @FXML
-    void adminDashboardSettingOnMouseClicked(MouseEvent event) {
+    void receptionistDashboardSettingOnMouseClicked(MouseEvent event) {
 
     }
 
     @FXML
-    void adminPatientManagementOnMouseClicked(MouseEvent event) {
+    void receptionistPatientManagementOnMouseClicked(MouseEvent event) {
 
     }
 
     @FXML
-    void adminPaymentOnMouseClicked(MouseEvent event) {
+    void receptionistPaymentOnMouseClicked(MouseEvent event) {
 
     }
 
     @FXML
-    void adminReportingOnMouseClicked(MouseEvent event) {
+    void receptionistReportingOnMouseClicked(MouseEvent event) {
 
     }
 
     @FXML
-    void adminTherapistManagementOnMouseClicked(MouseEvent event) {
-
-    }
-
-    @FXML
-    void adminTherapistProgramManagementOnMouseClicked(MouseEvent event) {
-
-    }
-
-    @FXML
-    void adminTherapySessionOnMouseClicked(MouseEvent event) {
+    void receptionistTherapySessionOnMouseClicked(MouseEvent event) {
 
     }
 

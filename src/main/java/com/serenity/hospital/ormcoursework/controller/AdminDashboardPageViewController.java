@@ -1,11 +1,14 @@
 package com.serenity.hospital.ormcoursework.controller;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
+
+import java.io.IOException;
 
 public class AdminDashboardPageViewController {
 
@@ -104,8 +107,9 @@ public class AdminDashboardPageViewController {
     }
 
     @FXML
-    void adminTherapistManagementOnMouseClicked(MouseEvent event) {
-
+    void adminTherapistManagementOnMouseClicked(MouseEvent event) throws IOException {
+        AdminDashboard.getChildren().clear();
+        AdminDashboard.getChildren().add(FXMLLoader.load(getClass().getResource("/view/AdminTherapistManagementPage.fxml")));
     }
 
     @FXML

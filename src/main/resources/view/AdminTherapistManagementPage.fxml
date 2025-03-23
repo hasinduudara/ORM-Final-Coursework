@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="adminTherapistManagementPage" prefHeight="750.0" prefWidth="1500.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.serenity.hospital.ormcoursework.controller.AdminTherapistManagementPageController">
+   <children>
+      <Pane layoutX="-1.0" prefHeight="62.0" prefWidth="1501.0" style="-fx-background-color: #006d49;">
+         <children>
+            <Label layoutX="30.0" layoutY="13.0" style="-fx-text-fill: #ffffff;" text="Therapist Management">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Pane layoutX="1245.0" layoutY="13.0" prefHeight="36.0" prefWidth="226.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20;">
+               <children>
+                  <ImageView fx:id="therapistManagementBackDashboardimg" fitHeight="30.0" fitWidth="28.0" layoutX="14.0" layoutY="4.0" onMouseClicked="#therapistManagementBackDashboardimgOnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/back-button.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="therapistManagementBackDashboardtxt" layoutX="54.0" layoutY="3.0" onMouseClicked="#therapistManagementBackDashboardtxtOnAction" prefHeight="30.0" prefWidth="167.0" text="Main Dashboard">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="27.0" layoutY="75.0" prefHeight="209.0" prefWidth="1446.0" style="-fx-background-color: #e8eeea; -fx-background-radius: 20;">
+         <children>
+            <Label layoutX="22.0" layoutY="18.0" text="Name :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textTherapistName" layoutX="93.0" layoutY="19.0" prefHeight="30.0" prefWidth="401.0" promptText="Enter Therapist Name" style="-fx-border-color: #7b7b7b; -fx-background-radius: 10; -fx-border-radius: 10;" />
+            <Label layoutX="22.0" layoutY="60.0" text="Email :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textTherapistEmail" layoutX="93.0" layoutY="61.0" prefHeight="30.0" prefWidth="401.0" promptText="Enter Therapist Email" style="-fx-border-color: #7b7b7b; -fx-background-radius: 10; -fx-border-radius: 10;" />
+            <Label layoutX="968.0" layoutY="20.0" text="ID :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTherapistID" layoutX="1043.0" layoutY="19.0" prefHeight="30.0" prefWidth="376.0" style="-fx-border-color: #7b7b7b; -fx-background-color: #ffffff; -fx-background-radius: 10; -fx-border-radius: 10;" />
+            <Label layoutX="968.0" layoutY="58.0" text="Phone :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtTherapistPhoneNo" layoutX="1043.0" layoutY="59.0" prefHeight="30.0" prefWidth="376.0" promptText="Enter Therapist Phone No" style="-fx-border-color: #7b7b7b; -fx-background-radius: 10; -fx-border-radius: 10;" />
+            <HBox layoutX="370.0" layoutY="154.0" prefHeight="34.0" prefWidth="706.0" spacing="20.0">
+               <children>
+                  <Button fx:id="btnadd" mnemonicParsing="false" onAction="#btnaddOnAction" prefHeight="34.0" prefWidth="170.0" style="-fx-background-color: #0037FF; -fx-text-fill: #ffffff; -fx-background-radius: 20; -fx-border-color: #585858; -fx-border-radius: 20;" text=" Add Therapist">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefWidth="170.0" style="-fx-background-color: #00c447; -fx-text-fill: #ffffff; -fx-background-radius: 20; -fx-border-color: #585858; -fx-border-radius: 20;" text="Update Therapist">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefWidth="170.0" style="-fx-background-color: #ff0000; -fx-text-fill: #ffffff; -fx-background-radius: 20; -fx-border-color: #585858; -fx-border-radius: 20;" text="Delete Therapist">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnViewTherapistSchedules" mnemonicParsing="false" onAction="#btnViewTherapistSchedulesOnAction" prefHeight="34.0" prefWidth="230.0" style="-fx-background-color: #9900FF; -fx-text-fill: #ffffff; -fx-background-radius: 20; -fx-border-color: #585858; -fx-border-radius: 20;" text="View Therapist Schedules">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Label layoutX="22.0" layoutY="104.0" text="Specific Therapy Programs :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="ComBoxTherapyProgram" layoutX="273.0" layoutY="104.0" onAction="#ComBoxTherapyProgramOnAction" prefHeight="29.0" prefWidth="220.0" style="-fx-border-color: #7b7b7b;" />
+         </children>
+      </Pane>
+      <TableView fx:id="tblTherapistManagement" layoutX="26.0" layoutY="310.0" prefHeight="416.0" prefWidth="1446.0">
+        <columns>
+          <TableColumn fx:id="colTherapistID" prefWidth="147.20000839233398" text="Therapist ID" />
+          <TableColumn fx:id="colTherapistName" prefWidth="340.0" text="Therapist Name" />
+            <TableColumn fx:id="colTherapistEmail" prefWidth="340.0" text="Therapist Email" />
+            <TableColumn fx:id="colTherapistPhoneNo" prefWidth="300.0" text="Therapist Phone No" />
+            <TableColumn fx:id="colTherapyProgram" prefWidth="317.599853515625" text="Specific Therapy Programs" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
