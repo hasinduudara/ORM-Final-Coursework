@@ -52,13 +52,13 @@
                </font>
             </Label>
             <TextField fx:id="textTherapistEmail" layoutX="93.0" layoutY="61.0" prefHeight="30.0" prefWidth="401.0" promptText="Enter Therapist Email" style="-fx-border-color: #7b7b7b; -fx-background-radius: 10; -fx-border-radius: 10;" />
-            <Label layoutX="968.0" layoutY="20.0" text="ID :">
+            <Label layoutX="917.0" layoutY="20.0" text="Therapist ID :">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
             <Label fx:id="lblTherapistID" layoutX="1043.0" layoutY="19.0" prefHeight="30.0" prefWidth="376.0" style="-fx-border-color: #7b7b7b; -fx-background-color: #ffffff; -fx-background-radius: 10; -fx-border-radius: 10;" />
-            <Label layoutX="968.0" layoutY="58.0" text="Phone :">
+            <Label layoutX="917.0" layoutY="58.0" text="Phone :">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

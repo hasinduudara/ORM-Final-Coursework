@@ -113,8 +113,9 @@ public class AdminDashboardPageViewController {
     }
 
     @FXML
-    void adminTherapistProgramManagementOnMouseClicked(MouseEvent event) {
-
+    void adminTherapistProgramManagementOnMouseClicked(MouseEvent event) throws IOException {
+        AdminDashboard.getChildren().clear();
+        AdminDashboard.getChildren().add(FXMLLoader.load(getClass().getResource("/view/AdminTherapyProgramManagementPage.fxml")));
     }
 
     @FXML
