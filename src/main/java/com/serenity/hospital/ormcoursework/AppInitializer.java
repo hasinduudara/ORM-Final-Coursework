@@ -1,11 +1,14 @@
 package com.serenity.hospital.ormcoursework;
 
+import com.serenity.hospital.ormcoursework.config.FactoryConfiguration;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 public class AppInitializer extends Application {
 
@@ -20,7 +23,15 @@ public class AppInitializer extends Application {
         primaryStage.show();
     }
 
+    private void initializeDatabase() {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        transaction.commit();
+        session.close();
+    }
+
     public static void main(String[] args) {
+        new AppInitializer().initializeDatabase();
         launch(args);
     }
 }

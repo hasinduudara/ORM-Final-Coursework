@@ -4,7 +4,7 @@ module com.serenity.hospital.ormcoursework {
     requires javafx.graphics;
     requires java.sql;
     requires lombok;
-    requires com.jfoenix;
+//    requires com.jfoenix;
     requires net.sf.jasperreports.core;
 
     requires org.hibernate.orm.core;
