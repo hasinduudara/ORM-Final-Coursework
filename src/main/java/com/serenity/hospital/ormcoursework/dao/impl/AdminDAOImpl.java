@@ -3,6 +3,7 @@ package com.serenity.hospital.ormcoursework.dao.impl;
 import com.serenity.hospital.ormcoursework.config.FactoryConfiguration;
 import com.serenity.hospital.ormcoursework.dao.AdminDAO;
 import com.serenity.hospital.ormcoursework.entity.Admin;
+import com.serenity.hospital.ormcoursework.util.PasswordEncryptionUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -86,6 +87,23 @@ public class AdminDAOImpl implements AdminDAO {
 
     @Override
     public Admin getAdminByUsername(String username) {
-        return null;
+        try (Session session = factoryConfiguration.getSession()) {
+            return session.createQuery("FROM Admin WHERE userName = :username", Admin.class)
+                    .setParameter("username", username)
+                    .uniqueResult();
+        }
+    }
+
+    @Override
+    public boolean registerAdmin(String name, String email, String userName, String password) {
+        if (getAdminByUsername(userName) != null) {
+            return false;
+        }
+
+        String hashedPassword = PasswordEncryptionUtil.hashPassword(password);
+        String newAdminId = getNextId();
+        Admin admin = new Admin(newAdminId, name, email, userName, hashedPassword);
+        save(admin);
+        return true;
     }
 }

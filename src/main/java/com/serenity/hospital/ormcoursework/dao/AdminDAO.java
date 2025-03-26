@@ -7,4 +7,6 @@ public interface AdminDAO extends CrudDAO <Admin>{
     boolean delete(Admin admin);
 
     Admin getAdminByUsername(String username);
+
+    boolean registerAdmin(String name, String email, String userName, String password);
 }

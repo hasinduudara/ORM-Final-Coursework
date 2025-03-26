@@ -4,8 +4,8 @@ module com.serenity.hospital.ormcoursework {
     requires javafx.graphics;
     requires java.sql;
     requires lombok;
-//    requires com.jfoenix;
     requires net.sf.jasperreports.core;
+    requires jbcrypt;
 
     requires org.hibernate.orm.core;
     requires java.naming;
