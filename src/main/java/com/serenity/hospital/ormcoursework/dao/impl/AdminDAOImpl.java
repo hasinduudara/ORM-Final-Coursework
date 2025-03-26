@@ -80,19 +80,19 @@ public class AdminDAOImpl implements AdminDAO {
                 int numericPart = Integer.parseInt(lastId.split("-")[1]) + 1;
                 return String.format("A00-%03d", numericPart);
             } else {
-                return "A001";
+                return "A00-001";
             }
         }
     }
 
-    @Override
-    public Admin getAdminByUsername(String username) {
-        try (Session session = factoryConfiguration.getSession()) {
-            return session.createQuery("FROM Admin WHERE userName = :username", Admin.class)
-                    .setParameter("username", username)
-                    .uniqueResult();
-        }
-    }
+//    @Override
+//    public Admin getAdminByUsername(String username) {
+//        try (Session session = factoryConfiguration.getSession()) {
+//            return session.createQuery("FROM Admin WHERE userName = :username", Admin.class)
+//                    .setParameter("username", username)
+//                    .uniqueResult();
+//        }
+//    }
 
     @Override
     public boolean registerAdmin(String name, String email, String userName, String password) {
@@ -105,5 +105,14 @@ public class AdminDAOImpl implements AdminDAO {
         Admin admin = new Admin(newAdminId, name, email, userName, hashedPassword);
         save(admin);
         return true;
+    }
+
+    @Override
+    public Admin getAdminByUsername(String username) {
+        try (Session session = factoryConfiguration.getSession()) {
+            return session.createQuery("FROM Admin WHERE userName = :username", Admin.class)
+                    .setParameter("username", username)
+                    .uniqueResult();
+        }
     }
 }

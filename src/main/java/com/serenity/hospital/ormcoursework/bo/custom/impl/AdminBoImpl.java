@@ -1,9 +1,14 @@
-package com.serenity.hospital.ormcoursework.bo;
+package com.serenity.hospital.ormcoursework.bo.custom.impl;
 
+import com.serenity.hospital.ormcoursework.bo.custom.AdminBo;
+import com.serenity.hospital.ormcoursework.config.FactoryConfiguration;
 import com.serenity.hospital.ormcoursework.dao.AdminDAO;
 import com.serenity.hospital.ormcoursework.dao.impl.AdminDAOImpl;
 import com.serenity.hospital.ormcoursework.entity.Admin;
 import com.serenity.hospital.ormcoursework.util.PasswordEncryptionUtil;
+import org.hibernate.Session;
+
+
 
 public class AdminBoImpl implements AdminBo {
     private final AdminDAO adminDAO = new AdminDAOImpl();
@@ -21,8 +26,5 @@ public class AdminBoImpl implements AdminBo {
         return true;
     }
 
-    @Override
-    public Admin getAdminByUsername(String userName) {
-        return null;
-    }
+
 }

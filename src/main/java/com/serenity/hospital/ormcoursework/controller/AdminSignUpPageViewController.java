@@ -1,7 +1,7 @@
 package com.serenity.hospital.ormcoursework.controller;
 
-import com.serenity.hospital.ormcoursework.bo.AdminBo;
-import com.serenity.hospital.ormcoursework.bo.AdminBoImpl;
+import com.serenity.hospital.ormcoursework.bo.custom.AdminBo;
+import com.serenity.hospital.ormcoursework.bo.custom.impl.AdminBoImpl;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -69,8 +69,9 @@ public class AdminSignUpPageViewController {
         }
 
         if (adminBo.registerAdmin(name, email, userName, password)) {
-            adminSignUpPage.getChildren().clear();
-            adminSignUpPage.getChildren().add(FXMLLoader.load(getClass().getResource("/view/AdminLogPageView.fxml")));
+//            adminSignUpPage.getChildren().clear();
+//            adminSignUpPage.getChildren().add(FXMLLoader.load(getClass().getResource("/view/AdminLogPageView.fxml")));
+            loadUI("/view/AdminLogPageView.fxml");
         }
     }
 
@@ -86,7 +87,7 @@ public class AdminSignUpPageViewController {
         alert.showAndWait();
     }
 
-    @FXML
+
     void goToLogin(MouseEvent event) {
         loadUI("/view/AdminDashboardPageView.fxml");
     }
