@@ -82,8 +82,9 @@ public class AdminDashboardPageViewController {
     private Pane panes111111;
 
     @FXML
-    void adminDashboardLogOutOnMouseClicked(MouseEvent event) {
-
+    void adminDashboardLogOutOnMouseClicked(MouseEvent event) throws IOException {
+        AdminDashboard.getChildren().clear();
+        AdminDashboard.getChildren().add(FXMLLoader.load(getClass().getResource("/view/WelcomePageView.fxml")));
     }
 
     @FXML

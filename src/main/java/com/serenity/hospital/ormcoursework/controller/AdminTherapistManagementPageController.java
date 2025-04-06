@@ -2,6 +2,7 @@ package com.serenity.hospital.ormcoursework.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -11,6 +12,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+
+import java.io.IOException;
 
 public class AdminTherapistManagementPageController {
 
@@ -94,8 +97,9 @@ public class AdminTherapistManagementPageController {
     }
 
     @FXML
-    void therapistManagementBackDashboardimgOnAction(MouseEvent event) {
-
+    void therapistManagementBackDashboardimgOnAction(MouseEvent event) throws IOException {
+        adminTherapistManagementPage.getChildren().clear();
+        adminTherapistManagementPage.getChildren().add(FXMLLoader.load(getClass().getResource("/view/AdminDashboardPageView.fxml")));
     }
 
     @FXML
