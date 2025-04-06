@@ -32,7 +32,7 @@ public class TherapistDAOImpl implements TherapistDAO {
             if (existing != null) {
                 throw new Exception("Therapist ID already exists");
             }
-            session.persist(therapist);
+            session.persist(entity);
             transaction.commit();
             return true;
         } catch (Exception e) {
@@ -50,7 +50,7 @@ public class TherapistDAOImpl implements TherapistDAO {
         Session session = factoryConfiguration.getSession();
         Transaction transaction = session.beginTransaction();
         try {
-            session.merge(therapist);
+            session.merge(entity);
             transaction.commit();
             return true;
         } catch (Exception e) {

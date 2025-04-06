@@ -1,24 +1,31 @@
 package com.serenity.hospital.ormcoursework.controller;
 
+import com.serenity.hospital.ormcoursework.bo.custom.TherapistBO;
+import com.serenity.hospital.ormcoursework.bo.custom.impl.TherapistBOImpl;
+import com.serenity.hospital.ormcoursework.config.FactoryConfiguration;
+import com.serenity.hospital.ormcoursework.dto.TherapistDTO;
+import com.serenity.hospital.ormcoursework.view.tdm.TherapistTM;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
 
-public class AdminTherapistManagementPageController {
+public class AdminTherapistManagementPageController implements Initializable {
 
     @FXML
-    private ComboBox<?> ComBoxTherapyProgram;
+    private ComboBox<String> ComBoxTherapyProgram;
 
     @FXML
     private AnchorPane adminTherapistManagementPage;
@@ -54,7 +61,7 @@ public class AdminTherapistManagementPageController {
     private Label lblTherapistID;
 
     @FXML
-    private TableView<?> tblTherapistManagement;
+    private TableView<TherapistTM> tblTherapistManagement;
 
     @FXML
     private TextField textTherapistEmail;
@@ -71,9 +78,60 @@ public class AdminTherapistManagementPageController {
     @FXML
     private TextField txtTherapistPhoneNo;
 
+    private final FactoryConfiguration factoryConfiguration = new FactoryConfiguration();
+    private final TherapistBO therapistBO = new TherapistBOImpl();
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        colTherapistID.setCellValueFactory(new PropertyValueFactory<>("therapistID"));
+        colTherapistName.setCellValueFactory(new PropertyValueFactory<>("therapistName"));
+        colTherapistEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
+        colTherapistPhoneNo.setCellValueFactory(new PropertyValueFactory<>("phoneNumber"));
+        colTherapyProgram.setCellValueFactory(new PropertyValueFactory<>("specialization"));
+
+        // Load data into table
+        loadTherapists();
+        generateNewId();
+
+    }
+
+    private void generateNewId() {
+        lblTherapistID.setText(therapistBO.getNaxtTherapistID());
+    }
+
+    private void loadTherapists() {
+        try {
+            ArrayList<TherapistDTO> therapists = (ArrayList<TherapistDTO>) therapistBO.loadAllTherapists();
+            ObservableList<TherapistTM> therapistList = FXCollections.observableArrayList();
+
+            for (TherapistDTO therapistDTO : therapists) {
+                TherapistTM therapistTM = new TherapistTM(
+                        therapistDTO.getTherapistID(),
+                        therapistDTO.getTherapistName(),
+                        therapistDTO.getEmail(),
+                        therapistDTO.getPhoneNumber(),
+                        therapistDTO.getSpecialization()
+                );
+                therapistList.add(therapistTM);
+            }
+            tblTherapistManagement.setItems(therapistList);
+        } catch (Exception e) {
+            showAlert("Error loading therapists: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    private void showAlert(String s) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Information");
+        alert.setHeaderText(null);
+        alert.setContentText(s);
+        alert.showAndWait();
+    }
+
     @FXML
     void ComBoxTherapyProgramOnAction(ActionEvent event) {
-
+//        ComBoxTherapyProgram.getItems().addAll("Option A", "Option B", "Option C");
     }
 
     @FXML
