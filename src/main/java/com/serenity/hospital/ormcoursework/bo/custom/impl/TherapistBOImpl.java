@@ -14,7 +14,7 @@ public class TherapistBOImpl implements TherapistBO {
 
     @Override
     public boolean saveTherapist(TherapistDTO therapistDTO) {
-        return therapistDTO.save(
+        return therapistDAO.save(
                 new Therapist(therapistDTO.getTherapistID(), therapistDTO.getTherapistName(),
                         therapistDTO.getEmail(), therapistDTO.getPhoneNumber(), therapistDTO.getSpecialization()
                 )
@@ -23,7 +23,7 @@ public class TherapistBOImpl implements TherapistBO {
 
     @Override
     public boolean updateTherapist(TherapistDTO therapistDTO) {
-        return therapistDTO.update(
+        return therapistDAO.update(
                 new Therapist(therapistDTO.getTherapistID(), therapistDTO.getTherapistName(),
                         therapistDTO.getEmail(), therapistDTO.getPhoneNumber(), therapistDTO.getSpecialization()
                 )
