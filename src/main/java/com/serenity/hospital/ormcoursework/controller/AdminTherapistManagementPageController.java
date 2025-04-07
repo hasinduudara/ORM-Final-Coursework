@@ -93,6 +93,15 @@ public class AdminTherapistManagementPageController implements Initializable {
         loadTherapists();
         generateNewId();
 
+        ComBoxTherapyProgram.getItems().addAll(
+                "Cognitive Behavioral Therapy",
+                "Mindfulness-Based Stress Reduction",
+                "Dialectical Behavior Therapy",
+                "Group Therapy Sessions",
+                "Family Counseling"
+        );
+
+
     }
 
     private void generateNewId() {
@@ -131,8 +140,9 @@ public class AdminTherapistManagementPageController implements Initializable {
 
     @FXML
     void ComBoxTherapyProgramOnAction(ActionEvent event) {
-//        ComBoxTherapyProgram.getItems().addAll("Option A", "Option B", "Option C");
+
     }
+
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {

@@ -2,6 +2,7 @@ package com.serenity.hospital.ormcoursework.config;
 
 import com.serenity.hospital.ormcoursework.entity.Admin;
 import com.serenity.hospital.ormcoursework.entity.Receptionist;
+import com.serenity.hospital.ormcoursework.entity.Therapist;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -23,6 +24,7 @@ public class FactoryConfiguration {
 
         configuration.addAnnotatedClass(Admin.class);
         configuration.addAnnotatedClass(Receptionist.class);
+        configuration.addAnnotatedClass(Therapist.class);
 
         sessionFactory = configuration.buildSessionFactory();
     }
