@@ -12,6 +12,7 @@ public class TherapistDTO {
     private String therapistID;
     private String therapistName;
     private String email;
-    private int phoneNumber;
+    private String phoneNumber;
     private String specialization;
+
 }

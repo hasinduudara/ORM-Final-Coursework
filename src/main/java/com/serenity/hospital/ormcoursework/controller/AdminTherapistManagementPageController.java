@@ -43,19 +43,19 @@ public class AdminTherapistManagementPageController implements Initializable {
     private Button btnadd;
 
     @FXML
-    private TableColumn<?, ?> colTherapistEmail;
+    private TableColumn<TherapistTM, String> colTherapistEmail;
 
     @FXML
-    private TableColumn<?, ?> colTherapistID;
+    private TableColumn<TherapistTM, String> colTherapistID;
 
     @FXML
-    private TableColumn<?, ?> colTherapistName;
+    private TableColumn<TherapistTM, String> colTherapistName;
 
     @FXML
-    private TableColumn<?, ?> colTherapistPhoneNo;
+    private TableColumn<TherapistTM, String> colTherapistPhoneNo;
 
     @FXML
-    private TableColumn<?, ?> colTherapyProgram;
+    private TableColumn<TherapistTM, String> colTherapyProgram;
 
     @FXML
     private Label lblTherapistID;
@@ -143,15 +143,62 @@ public class AdminTherapistManagementPageController implements Initializable {
 
     }
 
-
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
+        String id = lblTherapistID.getText();
+        if (id.isEmpty()) {
+            showAlert("Please select a therapist to delete!");
+            return;
+        }
 
+        try {
+            boolean isDeleted = therapistBO.deleteTherapist(id);
+            if (isDeleted) {
+                showAlert("Therapist deleted successfully!");
+                loadTherapists();
+                generateNewId();
+            } else {
+                showAlert("Failed to delete therapist.");
+            }
+        } catch (Exception e) {
+            showAlert("Error deleting therapist: " + e.getMessage());
+            e.printStackTrace();
+        }
+        loadTherapists();
+        clearFields();
     }
 
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
+        String id = lblTherapistID.getText();
+        String name = textTherapistName.getText();
+        String email = textTherapistEmail.getText();
+        String phoneNumber = txtTherapistPhoneNo.getText();
+        String specialization = ComBoxTherapyProgram.getValue();
 
+        if (id.isEmpty() || name.isEmpty() || email.isEmpty() || phoneNumber.isEmpty() || specialization == null) {
+            showAlert("Please fill all fields!");
+            return;
+        }
+
+        try {
+            TherapistDTO therapistDTO = new TherapistDTO(id, name, email, phoneNumber, specialization);
+
+            boolean isUpdated = therapistBO.updateTherapist(therapistDTO);
+            if (isUpdated) {
+                showAlert("Therapist updated successfully!");
+                loadTherapists();
+                generateNewId();
+            } else {
+                showAlert("Failed to update therapist.");
+            }
+        } catch (Exception e) {
+            showAlert("Error updating therapist: " + e.getMessage());
+            e.printStackTrace();
+        }
+
+        loadTherapists();
+        clearFields();
     }
 
     @FXML
@@ -161,7 +208,42 @@ public class AdminTherapistManagementPageController implements Initializable {
 
     @FXML
     void btnaddOnAction(ActionEvent event) {
+        String id = lblTherapistID.getText();
+        String name = textTherapistName.getText();
+        String email = textTherapistEmail.getText();
+        String phoneNumber = txtTherapistPhoneNo.getText();
+        String specialization = ComBoxTherapyProgram.getValue();
 
+        if (id.isEmpty() || name.isEmpty() || email.isEmpty() || phoneNumber.isEmpty() || specialization == null) {
+            showAlert("Please fill all fields!");
+            return;
+        }
+
+        TherapistDTO therapistDTO = new TherapistDTO(id, name, email, phoneNumber, specialization);
+
+        try {
+            boolean isSaved = therapistBO.saveTherapist(therapistDTO);
+            if (isSaved) {
+                showAlert("Therapist saved successfully!");
+                loadTherapists();
+                generateNewId();
+            } else {
+                showAlert("Failed to save therapist.");
+            }
+        } catch (Exception e) {
+            showAlert("Error saving therapist: " + e.getMessage());
+            e.printStackTrace();
+        }
+        loadTherapists();
+        clearFields();
+    }
+
+    private void clearFields() {
+        textTherapistName.clear();
+        textTherapistEmail.clear();
+        txtTherapistPhoneNo.clear();
+        ComBoxTherapyProgram.getSelectionModel().clearSelection();
+        generateNewId();
     }
 
     @FXML
@@ -171,8 +253,21 @@ public class AdminTherapistManagementPageController implements Initializable {
     }
 
     @FXML
-    void therapistManagementBackDashboardtxtOnAction(MouseEvent event) {
+    void therapistManagementBackDashboardtxtOnAction(MouseEvent event) throws IOException {
+        adminTherapistManagementPage.getChildren().clear();
+        adminTherapistManagementPage.getChildren().add(FXMLLoader.load(getClass().getResource("/view/AdminDashboardPageView.fxml")));
+    }
 
+    @FXML
+    void tblTherapistManagementOnMouseClicked(MouseEvent event) {
+        TherapistTM selectedTherapist = tblTherapistManagement.getSelectionModel().getSelectedItem();
+        if (selectedTherapist != null) {
+            lblTherapistID.setText(selectedTherapist.getTherapistID());
+            textTherapistName.setText(selectedTherapist.getTherapistName());
+            textTherapistEmail.setText(selectedTherapist.getEmail());
+            txtTherapistPhoneNo.setText(selectedTherapist.getPhoneNumber());
+            ComBoxTherapyProgram.setValue(selectedTherapist.getSpecialization());
+        }
     }
 
 }

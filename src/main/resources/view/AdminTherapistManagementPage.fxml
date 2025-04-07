@@ -96,7 +96,7 @@
             <ComboBox fx:id="ComBoxTherapyProgram" layoutX="273.0" layoutY="104.0" onAction="#ComBoxTherapyProgramOnAction" prefHeight="29.0" prefWidth="220.0" style="-fx-border-color: #7b7b7b;" />
          </children>
       </Pane>
-      <TableView fx:id="tblTherapistManagement" layoutX="26.0" layoutY="310.0" prefHeight="416.0" prefWidth="1446.0">
+      <TableView fx:id="tblTherapistManagement" layoutX="26.0" layoutY="310.0" onMouseClicked="#tblTherapistManagementOnMouseClicked" prefHeight="416.0" prefWidth="1446.0">
         <columns>
           <TableColumn fx:id="colTherapistID" prefWidth="147.20000839233398" text="Therapist ID" />
           <TableColumn fx:id="colTherapistName" prefWidth="340.0" text="Therapist Name" />
