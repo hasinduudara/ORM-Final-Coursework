@@ -43,6 +43,9 @@ public class AdminTherapistManagementPageController implements Initializable {
     private Button btnadd;
 
     @FXML
+    private Button btnClearTherapistFields;
+
+    @FXML
     private TableColumn<TherapistTM, String> colTherapistEmail;
 
     @FXML
@@ -243,7 +246,7 @@ public class AdminTherapistManagementPageController implements Initializable {
         textTherapistEmail.clear();
         txtTherapistPhoneNo.clear();
         ComBoxTherapyProgram.getSelectionModel().clearSelection();
-        generateNewId();
+        lblTherapistID.setText("");
     }
 
     @FXML
@@ -268,6 +271,11 @@ public class AdminTherapistManagementPageController implements Initializable {
             txtTherapistPhoneNo.setText(selectedTherapist.getPhoneNumber());
             ComBoxTherapyProgram.setValue(selectedTherapist.getSpecialization());
         }
+    }
+
+    @FXML
+    void btnClearTherapistFieldsOnAction(ActionEvent event) {
+        clearFields();
     }
 
 }

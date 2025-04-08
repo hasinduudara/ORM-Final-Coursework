@@ -64,24 +64,29 @@
                </font>
             </Label>
             <TextField fx:id="txtTherapistPhoneNo" layoutX="1043.0" layoutY="59.0" prefHeight="30.0" prefWidth="376.0" promptText="Enter Therapist Phone No" style="-fx-border-color: #7b7b7b; -fx-background-radius: 10; -fx-border-radius: 10;" />
-            <HBox layoutX="370.0" layoutY="154.0" prefHeight="34.0" prefWidth="706.0" spacing="20.0">
+            <HBox layoutX="172.0" layoutY="151.0" prefHeight="34.0" prefWidth="1102.0" spacing="20.0">
                <children>
-                  <Button fx:id="btnadd" mnemonicParsing="false" onAction="#btnaddOnAction" prefHeight="34.0" prefWidth="170.0" style="-fx-background-color: #0037FF; -fx-text-fill: #ffffff; -fx-background-radius: 20; -fx-border-color: #585858; -fx-border-radius: 20;" text=" Add Therapist">
+                  <Button fx:id="btnadd" mnemonicParsing="false" onAction="#btnaddOnAction" prefHeight="34.0" prefWidth="220.0" style="-fx-background-color: #0037FF; -fx-text-fill: #ffffff; -fx-background-radius: 20; -fx-border-color: #585858; -fx-border-radius: 20;" text=" Add Therapist">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefWidth="170.0" style="-fx-background-color: #00c447; -fx-text-fill: #ffffff; -fx-background-radius: 20; -fx-border-color: #585858; -fx-border-radius: 20;" text="Update Therapist">
+                  <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefWidth="240.0" style="-fx-background-color: #00c447; -fx-text-fill: #ffffff; -fx-background-radius: 20; -fx-border-color: #585858; -fx-border-radius: 20;" text="Update Therapist">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefWidth="170.0" style="-fx-background-color: #ff0000; -fx-text-fill: #ffffff; -fx-background-radius: 20; -fx-border-color: #585858; -fx-border-radius: 20;" text="Delete Therapist">
+                  <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefWidth="240.0" style="-fx-background-color: #ff0000; -fx-text-fill: #ffffff; -fx-background-radius: 20; -fx-border-color: #585858; -fx-border-radius: 20;" text="Delete Therapist">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
                   <Button fx:id="btnViewTherapistSchedules" mnemonicParsing="false" onAction="#btnViewTherapistSchedulesOnAction" prefHeight="34.0" prefWidth="230.0" style="-fx-background-color: #9900FF; -fx-text-fill: #ffffff; -fx-background-radius: 20; -fx-border-color: #585858; -fx-border-radius: 20;" text="View Therapist Schedules">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnClearTherapistFields" mnemonicParsing="false" onAction="#btnClearTherapistFieldsOnAction" prefHeight="34.0" prefWidth="130.0" style="-fx-background-color: #505050; -fx-text-fill: #ffffff; -fx-background-radius: 20; -fx-border-color: #585858; -fx-border-radius: 20;" text="Clear">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
