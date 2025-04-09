@@ -1,8 +1,6 @@
 package com.serenity.hospital.ormcoursework.view.tdm;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor

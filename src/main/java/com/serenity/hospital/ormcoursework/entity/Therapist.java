@@ -28,11 +28,8 @@ public class Therapist {
     @Column(nullable = false)
     private String specialization;
 
-//    @Column(nullable = false)
-//    private String availability;
-
 //    @OneToMany(mappedBy = "therapist", cascade = CascadeType.ALL)
-//    private List<TherapistProgram> therapistPrograms;
+//    private List<TherapyProgram> therapistPrograms;
 //
 //    @OneToMany(mappedBy = "therapist", cascade = CascadeType.ALL)
 //    private List<TherapySession> therapySessions;

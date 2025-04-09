@@ -1,22 +1,22 @@
 package com.serenity.hospital.ormcoursework.dao.impl;
 
 import com.serenity.hospital.ormcoursework.config.FactoryConfiguration;
-import com.serenity.hospital.ormcoursework.dao.TherapistDAO;
-import com.serenity.hospital.ormcoursework.entity.Therapist;
+import com.serenity.hospital.ormcoursework.dao.TherapyProgramDAO;
+import com.serenity.hospital.ormcoursework.entity.TherapyProgram;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import java.util.List;
 
-public class TherapistDAOImpl implements TherapistDAO {
+public class TherapyProgramDAOImpl implements TherapyProgramDAO {
     private final FactoryConfiguration factoryConfiguration = new FactoryConfiguration();
 
     @Override
-    public Therapist getById(String therapistId) {
+    public TherapyProgram getById(String therapyProgramId) {
         try {
             Session session = factoryConfiguration.getSession();
-            Therapist therapist = session.get(Therapist.class, therapistId);
-            return therapist;
+            TherapyProgram therapyProgram = session.get(TherapyProgram.class, therapyProgramId);
+            return therapyProgram;
         } catch (Exception e) {
             e.printStackTrace();
             return null;
@@ -24,13 +24,28 @@ public class TherapistDAOImpl implements TherapistDAO {
     }
 
     @Override
-    public boolean save(Therapist entity) {
+    public TherapyProgram getByName(String therapyProgramName) {
+        return null;
+    }
+
+    @Override
+    public void updateTherapyProgram(TherapyProgram therapyProgram) {
+
+    }
+
+    @Override
+    public void deleteTherapyProgram(String therapyProgramId) {
+
+    }
+
+    @Override
+    public boolean save(TherapyProgram entity) {
         Session session = factoryConfiguration.getSession();
         Transaction transaction = session.beginTransaction();
         try {
-            Therapist existing = session.get(Therapist.class, entity.getTherapistID());
+            TherapyProgram existing = session.get(TherapyProgram.class, entity.getProgramID());
             if (existing != null) {
-                throw new Exception("Therapist ID already exists");
+                throw new Exception("Therapy Program ID already exists");
             }
             session.persist(entity);
             transaction.commit();
@@ -46,7 +61,7 @@ public class TherapistDAOImpl implements TherapistDAO {
     }
 
     @Override
-    public boolean update(Therapist entity) {
+    public boolean update(TherapyProgram entity) {
         Session session = factoryConfiguration.getSession();
         Transaction transaction = session.beginTransaction();
         try {
@@ -68,13 +83,13 @@ public class TherapistDAOImpl implements TherapistDAO {
         Session session = factoryConfiguration.getSession();
         Transaction transaction = session.beginTransaction();
         try {
-            Therapist therapist = session.get(Therapist.class, id);
-            if (therapist != null) {
-                session.remove(therapist);
+            TherapyProgram therapyProgram = session.get(TherapyProgram.class, id);
+            if (therapyProgram != null) {
+                session.remove(therapyProgram);
                 transaction.commit();
                 return true;
             } else {
-                throw new Exception("Therapist not found");
+                throw new Exception("Therapy Program not found");
             }
         } catch (Exception e) {
             transaction.rollback();
@@ -89,23 +104,34 @@ public class TherapistDAOImpl implements TherapistDAO {
     @Override
     public String getNextId() {
         Session session = factoryConfiguration.getSession();
-        // Get the last therapist ID from the database
-        String lastId = (String) session.createQuery("SELECT t.id FROM Therapist t ORDER BY t.id DESC", String.class)
-                .setMaxResults(1)
-                .uniqueResult();
+        try {
+            // Get the last therapy program ID from the database
+            String lastId = session.createQuery("SELECT p.id FROM TherapyProgram p ORDER BY p.id DESC", String.class)
+                    .setMaxResults(1)
+                    .uniqueResult();
 
-        if (lastId != null) {
-            int newId = Integer.parseInt(lastId.split("-")[1]) + 1;
-            return String.format("T00-%03d", newId);
-        } else {
-            return "T00-001"; // Default ID if no records exist
+            if (lastId != null) {
+                int newId = Integer.parseInt(lastId.split("-")[1]) + 1;
+                return String.format("TP00-%03d", newId);
+            } else {
+                return "TP00-001"; // Default ID if no records exist
+            }
+        } finally {
+            if (session != null) {
+                session.close();
+            }
         }
     }
 
     @Override
-    public List<Therapist> getAll() {
+    public List<TherapyProgram> getAll() {
         Session session = factoryConfiguration.getSession();
-        List<Therapist> therapists = session.createQuery("FROM Therapist", Therapist.class).list();
-        return therapists;
+        try {
+            return session.createQuery("FROM TherapyProgram", TherapyProgram.class).list();
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
     }
 }
