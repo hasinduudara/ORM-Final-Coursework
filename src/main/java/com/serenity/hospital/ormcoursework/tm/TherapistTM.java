@@ -1,10 +1,11 @@
-package com.serenity.hospital.ormcoursework.view.tdm;
+package com.serenity.hospital.ormcoursework.tm;
 
 import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 
 public class TherapistTM {
     private String therapistID;

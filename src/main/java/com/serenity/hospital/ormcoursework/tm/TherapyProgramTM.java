@@ -1,4 +1,4 @@
-package com.serenity.hospital.ormcoursework.view.tdm;
+package com.serenity.hospital.ormcoursework.tm;
 
 public class TherapyProgramTM {
     private String programID;

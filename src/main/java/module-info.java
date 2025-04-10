@@ -12,6 +12,7 @@ module com.serenity.hospital.ormcoursework {
     requires jakarta.persistence;
 
     opens com.serenity.hospital.ormcoursework.config to jakarta.persistence;
+    opens com.serenity.hospital.ormcoursework.tm to javafx.base;
     opens com.serenity.hospital.ormcoursework.entity to org.hibernate.orm.core;
     opens com.serenity.hospital.ormcoursework.controller to javafx.fxml;
     opens com.serenity.hospital.ormcoursework.dto to javafx.base;

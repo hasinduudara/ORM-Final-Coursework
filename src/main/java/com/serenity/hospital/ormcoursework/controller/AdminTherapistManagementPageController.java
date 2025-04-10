@@ -4,7 +4,7 @@ import com.serenity.hospital.ormcoursework.bo.custom.TherapistBO;
 import com.serenity.hospital.ormcoursework.bo.custom.impl.TherapistBOImpl;
 import com.serenity.hospital.ormcoursework.config.FactoryConfiguration;
 import com.serenity.hospital.ormcoursework.dto.TherapistDTO;
-import com.serenity.hospital.ormcoursework.view.tdm.TherapistTM;
+import com.serenity.hospital.ormcoursework.tm.TherapistTM;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
