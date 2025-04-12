@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="patientManagementPage" prefHeight="750.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.serenity.hospital.ormcoursework.controller.PatientManagementController">
+   <children>
+      <Pane prefHeight="62.0" prefWidth="1500.0" style="-fx-background-color: #0046ca;">
+         <children>
+            <Label layoutX="30.0" layoutY="13.0" style="-fx-text-fill: #ffffff;" text="Patient Management">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Pane layoutX="1245.0" layoutY="13.0" prefHeight="36.0" prefWidth="226.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20;">
+               <children>
+                  <ImageView fx:id="therapyProgramBackDashboardimg" fitHeight="30.0" fitWidth="28.0" layoutX="14.0" layoutY="4.0" onMouseClicked="#therapistManagementBackDashboardimgOnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/back-button.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="therapyProgramBackDashboardtxt" layoutX="54.0" layoutY="3.0" onMouseClicked="#therapistManagementBackDashboardtxtOnAction" prefHeight="30.0" prefWidth="167.0" text="Main Dashboard">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Label layoutX="38.0" layoutY="106.0" text="Patient ID :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="149.0" layoutY="102.0" prefHeight="36.0" prefWidth="190.0" style="-fx-border-color: #666666;" />
+      <Label layoutX="382.0" layoutY="106.0" text="Name :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="479.0" layoutY="102.0" prefHeight="36.0" prefWidth="346.0" promptText="Enter Patient Name" style="-fx-border-color: #666666;" />
+      <Label layoutX="873.0" layoutY="106.0" text="Age :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="936.0" layoutY="102.0" prefHeight="36.0" prefWidth="130.0" promptText="Enter Patient Age" style="-fx-border-color: #666666;" />
+      <Label layoutX="1119.0" layoutY="106.0" text="Phone No :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="1231.0" layoutY="102.0" prefHeight="36.0" prefWidth="217.0" promptText="Enter Patient Phone No" style="-fx-border-color: #666666;" />
+      <Label layoutX="38.0" layoutY="163.0" text="Gender :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="381.0" layoutY="163.0" text="Address :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="479.0" layoutY="159.0" prefHeight="36.0" prefWidth="345.0" promptText="Enter Patient Address" style="-fx-border-color: #666666;" />
+      <ComboBox layoutX="149.0" layoutY="159.0" prefHeight="36.0" prefWidth="190.0" style="-fx-border-color: #666666;" />
+      <HBox layoutX="933.0" layoutY="159.0" prefHeight="36.0" prefWidth="480.0" spacing="15.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="110.0" style="-fx-border-color: #666666; -fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #00a2ff; -fx-text-fill: #ffffff;" text="Add">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="110.0" style="-fx-border-color: #666666; -fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #00d62d; -fx-text-fill: #ffffff;" text="Update">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="110.0" style="-fx-border-color: #666666; -fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #ff0000; -fx-text-fill: #ffffff;" text="Delete">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="110.0" style="-fx-border-color: #666666; -fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #5b5b5b; -fx-text-fill: #ffffff;" text="Clear">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
