@@ -1,7 +1,9 @@
 package com.serenity.hospital.ormcoursework.controller;
 
 import com.serenity.hospital.ormcoursework.bo.custom.TherapistBO;
+import com.serenity.hospital.ormcoursework.bo.custom.TherapyProgramBO;
 import com.serenity.hospital.ormcoursework.bo.custom.impl.TherapistBOImpl;
+import com.serenity.hospital.ormcoursework.bo.custom.impl.TherapyProgramBoImpl;
 import com.serenity.hospital.ormcoursework.config.FactoryConfiguration;
 import com.serenity.hospital.ormcoursework.dto.TherapistDTO;
 import com.serenity.hospital.ormcoursework.tm.TherapistTM;
@@ -20,6 +22,7 @@ import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class AdminTherapistManagementPageController implements Initializable {
@@ -83,6 +86,8 @@ public class AdminTherapistManagementPageController implements Initializable {
 
     private final FactoryConfiguration factoryConfiguration = new FactoryConfiguration();
     private final TherapistBO therapistBO = new TherapistBOImpl();
+    private final TherapyProgramBO therapyProgramBO = new TherapyProgramBoImpl();
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -104,8 +109,20 @@ public class AdminTherapistManagementPageController implements Initializable {
                 "Family Counseling"
         );
 
+//        loadTherapyProgramNames();
 
     }
+
+//    private void loadTherapyProgramNames() {
+//        try {
+//            List<String> programNames = therapyProgramBO.getAllTherapyProgramNames();
+//            ComBoxTherapyProgram.setItems(FXCollections.observableArrayList(programNames));
+//        } catch (Exception e) {
+//            showAlert("Error loading therapy programs: " + e.getMessage());
+//            e.printStackTrace();
+//        }
+//    }
+
 
     private void generateNewId() {
         lblTherapistID.setText(therapistBO.getNaxtTherapistID());
@@ -277,5 +294,6 @@ public class AdminTherapistManagementPageController implements Initializable {
     void btnClearTherapistFieldsOnAction(ActionEvent event) {
         clearFields();
     }
+
 
 }

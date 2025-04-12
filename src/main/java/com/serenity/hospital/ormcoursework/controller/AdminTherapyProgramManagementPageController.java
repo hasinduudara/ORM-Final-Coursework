@@ -1,6 +1,8 @@
 package com.serenity.hospital.ormcoursework.controller;
 
+import com.serenity.hospital.ormcoursework.bo.custom.TherapistBO;
 import com.serenity.hospital.ormcoursework.bo.custom.TherapyProgramBO;
+import com.serenity.hospital.ormcoursework.bo.custom.impl.TherapistBOImpl;
 import com.serenity.hospital.ormcoursework.bo.custom.impl.TherapyProgramBoImpl;
 import com.serenity.hospital.ormcoursework.config.FactoryConfiguration;
 import com.serenity.hospital.ormcoursework.dto.TherapyProgramDTO;
@@ -20,6 +22,7 @@ import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class AdminTherapyProgramManagementPageController implements Initializable {
@@ -99,6 +102,16 @@ public class AdminTherapyProgramManagementPageController implements Initializabl
         // Load data into the table
         loadTherapyProgramData();
         generateNewId();
+
+        // add combo box therepist names for therapist management
+        TherapistBO therapistBO = new TherapistBOImpl();
+        try {
+            List<String> therapistNames = therapistBO.getAllTherapistNames();
+            ComBoxTherapistName.getItems().addAll(therapistNames);
+        } catch (Exception e) {
+            showAlert("Error loading therapist names: " + e.getMessage());
+        }
+
     }
 
     private void generateNewId() {
@@ -135,7 +148,6 @@ public class AdminTherapyProgramManagementPageController implements Initializabl
 
     @FXML
     void ComBoxTherapyProgramOnAction(ActionEvent event) {
-
     }
 
     @FXML

@@ -3,6 +3,7 @@ package com.serenity.hospital.ormcoursework.bo.custom;
 import com.serenity.hospital.ormcoursework.dto.TherapyProgramDTO;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public interface TherapyProgramBO {
 
@@ -15,4 +16,7 @@ public interface TherapyProgramBO {
     String getNextTherapyProgramID();
 
     ArrayList<TherapyProgramDTO> loadAllTherapyPrograms() throws Exception;
+
+    List<String> getAllTherapyProgramNames() throws Exception;
+
 }

@@ -1,19 +1,21 @@
 package com.serenity.hospital.ormcoursework.bo.custom.impl;
 
 import com.serenity.hospital.ormcoursework.bo.custom.TherapyProgramBO;
+import com.serenity.hospital.ormcoursework.config.FactoryConfiguration;
 import com.serenity.hospital.ormcoursework.dao.TherapyProgramDAO;
+import com.serenity.hospital.ormcoursework.dao.impl.TherapyProgramDAOImpl;
 import com.serenity.hospital.ormcoursework.dto.TherapyProgramDTO;
 import com.serenity.hospital.ormcoursework.entity.TherapyProgram;
+import org.hibernate.Session;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class TherapyProgramBoImpl implements TherapyProgramBO {
 
-    private TherapyProgramDAO therapyProgramDAO;
+    private TherapyProgramDAO therapyProgramDAO = new TherapyProgramDAOImpl();
 
-    public TherapyProgramBoImpl() {
-        this.therapyProgramDAO = therapyProgramDAO;
-    }
+
 
     @Override
     public boolean addTherapyProgram(TherapyProgramDTO therapyProgramDTO) {
@@ -69,4 +71,22 @@ public class TherapyProgramBoImpl implements TherapyProgramBO {
         }
         return therapyProgramDTOS;
     }
+
+    @Override
+    public List<String> getAllTherapyProgramNames() throws Exception {
+        List<String> programNames = new ArrayList<>();
+        Session session = FactoryConfiguration.getInstance().getSession();
+        try {
+            session.beginTransaction();
+            List<TherapyProgram> programs = session.createQuery("FROM TherapyProgram", TherapyProgram.class).list();
+            for (TherapyProgram program : programs) {
+                programNames.add(program.getProgramName());
+            }
+            session.getTransaction().commit();
+        } finally {
+            session.close();
+        }
+        return programNames;
+    }
+
 }

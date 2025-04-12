@@ -53,4 +53,9 @@ public class TherapistBOImpl implements TherapistBO {
     public String getNaxtTherapistID() {
         return therapistDAO.getNextId();
     }
+
+    @Override
+    public List<String> getAllTherapistNames() {
+        return List.of();
+    }
 }
