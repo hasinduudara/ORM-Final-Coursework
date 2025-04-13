@@ -3,6 +3,8 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -11,8 +13,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="patientManagementPage" prefHeight="750.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.serenity.hospital.ormcoursework.controller.PatientManagementController">
+<AnchorPane fx:id="patientManagementPage" prefHeight="750.0" prefWidth="1500.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.serenity.hospital.ormcoursework.controller.PatientManagementController">
    <children>
       <Pane prefHeight="62.0" prefWidth="1500.0" style="-fx-background-color: #0046ca;">
          <children>
@@ -23,12 +24,12 @@
             </Label>
             <Pane layoutX="1245.0" layoutY="13.0" prefHeight="36.0" prefWidth="226.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20;">
                <children>
-                  <ImageView fx:id="therapyProgramBackDashboardimg" fitHeight="30.0" fitWidth="28.0" layoutX="14.0" layoutY="4.0" onMouseClicked="#therapistManagementBackDashboardimgOnAction" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="patientManagementDashboardimg" fitHeight="30.0" fitWidth="28.0" layoutX="14.0" layoutY="4.0" onMouseClicked="#patientManagementDashboardimgOnAction" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../assets/back-button.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="therapyProgramBackDashboardtxt" layoutX="54.0" layoutY="3.0" onMouseClicked="#therapistManagementBackDashboardtxtOnAction" prefHeight="30.0" prefWidth="167.0" text="Main Dashboard">
+                  <Label fx:id="patientManagementDashboardtxt" layoutX="54.0" layoutY="3.0" onMouseClicked="#patientManagementDashboardtxtOnAction" prefHeight="30.0" prefWidth="167.0" text="Main Dashboard">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
@@ -37,30 +38,31 @@
             </Pane>
          </children>
       </Pane>
+      <Pane layoutX="24.0" layoutY="79.0" prefHeight="204.0" prefWidth="1452.0" style="-fx-background-radius: 20; -fx-background-color: #f0f0f0; -fx-border-radius: 20;" />
       <Label layoutX="38.0" layoutY="106.0" text="Patient ID :">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="149.0" layoutY="102.0" prefHeight="36.0" prefWidth="190.0" style="-fx-border-color: #666666;" />
+      <TextField fx:id="txtPatientManagementPatientID" layoutX="149.0" layoutY="102.0" prefHeight="36.0" prefWidth="190.0" style="-fx-border-color: #666666;" />
       <Label layoutX="382.0" layoutY="106.0" text="Name :">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="479.0" layoutY="102.0" prefHeight="36.0" prefWidth="346.0" promptText="Enter Patient Name" style="-fx-border-color: #666666;" />
+      <TextField fx:id="txtPatientManagementName" layoutX="479.0" layoutY="102.0" prefHeight="36.0" prefWidth="346.0" promptText="Enter Patient Name" style="-fx-border-color: #666666;" />
       <Label layoutX="873.0" layoutY="106.0" text="Age :">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="936.0" layoutY="102.0" prefHeight="36.0" prefWidth="130.0" promptText="Enter Patient Age" style="-fx-border-color: #666666;" />
+      <TextField fx:id="txtPatientManagementAge" layoutX="936.0" layoutY="102.0" prefHeight="36.0" prefWidth="130.0" promptText="Enter Patient Age" style="-fx-border-color: #666666;" />
       <Label layoutX="1119.0" layoutY="106.0" text="Phone No :">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="1231.0" layoutY="102.0" prefHeight="36.0" prefWidth="217.0" promptText="Enter Patient Phone No" style="-fx-border-color: #666666;" />
+      <TextField fx:id="txtPatientManagementPhoneNo" layoutX="1231.0" layoutY="102.0" prefHeight="36.0" prefWidth="217.0" promptText="Enter Patient Phone No" style="-fx-border-color: #666666;" />
       <Label layoutX="38.0" layoutY="163.0" text="Gender :">
          <font>
             <Font name="System Bold" size="18.0" />
@@ -71,31 +73,53 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="479.0" layoutY="159.0" prefHeight="36.0" prefWidth="345.0" promptText="Enter Patient Address" style="-fx-border-color: #666666;" />
-      <ComboBox layoutX="149.0" layoutY="159.0" prefHeight="36.0" prefWidth="190.0" style="-fx-border-color: #666666;" />
-      <HBox layoutX="933.0" layoutY="159.0" prefHeight="36.0" prefWidth="480.0" spacing="15.0">
+      <TextField fx:id="txtPatientManagementAddress" layoutX="479.0" layoutY="159.0" prefHeight="36.0" prefWidth="345.0" promptText="Enter Patient Address" style="-fx-border-color: #666666;" />
+      <ComboBox fx:id="comBoxPatientManagementGender" layoutX="149.0" layoutY="159.0" onAction="#comBoxPatientManagementGenderOnAction" prefHeight="36.0" prefWidth="190.0" style="-fx-border-color: #666666;" />
+      <Label layoutX="873.0" layoutY="163.0" text="Therapy Program :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="comBoxPatientManagementTherapyProgram" layoutX="1053.0" layoutY="159.0" onAction="#comBoxPatientManagementTherapyProgramOnAction" prefHeight="36.0" prefWidth="394.0" style="-fx-border-color: #666666;" />
+      <HBox layoutX="421.0" layoutY="219.0" prefHeight="36.0" prefWidth="658.0" spacing="15.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="110.0" style="-fx-border-color: #666666; -fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #00a2ff; -fx-text-fill: #ffffff;" text="Add">
+            <Button fx:id="btnPatientAdd" mnemonicParsing="false" onAction="#btnPatientAddOnAction" prefHeight="36.0" prefWidth="110.0" style="-fx-border-color: #666666; -fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #00a2ff; -fx-text-fill: #ffffff;" text="Add">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="110.0" style="-fx-border-color: #666666; -fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #00d62d; -fx-text-fill: #ffffff;" text="Update">
+            <Button fx:id="btnPatientUpdate" mnemonicParsing="false" onAction="#btnPatientUpdateOnAction" prefHeight="36.0" prefWidth="110.0" style="-fx-border-color: #666666; -fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #00d62d; -fx-text-fill: #ffffff;" text="Update">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="110.0" style="-fx-border-color: #666666; -fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #ff0000; -fx-text-fill: #ffffff;" text="Delete">
+            <Button fx:id="btnPatientDelete" mnemonicParsing="false" onAction="#btnPatientDeleteOnAction" prefHeight="36.0" prefWidth="110.0" style="-fx-border-color: #666666; -fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #ff0000; -fx-text-fill: #ffffff;" text="Delete">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="110.0" style="-fx-border-color: #666666; -fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #5b5b5b; -fx-text-fill: #ffffff;" text="Clear">
+            <Button fx:id="btnPatientClear" mnemonicParsing="false" onAction="#btnPatientClearOnAction" prefHeight="36.0" prefWidth="110.0" style="-fx-border-color: #666666; -fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #5b5b5b; -fx-text-fill: #ffffff;" text="Clear">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnGoToPatientProfiles" mnemonicParsing="false" onAction="#btnGoToPatientProfilesOnAction" prefHeight="36.0" prefWidth="153.0" style="-fx-border-color: #666666; -fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #9f33ff; -fx-text-fill: #ffffff;" text="Patient Profiles">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
          </children>
       </HBox>
+      <TableView fx:id="tblPatientManagement" layoutX="24.0" layoutY="310.0" onMouseClicked="#tblPatientManagementOnMouseClicked" prefHeight="415.0" prefWidth="1452.0">
+        <columns>
+          <TableColumn fx:id="colPatientID" prefWidth="100.79998397827148" text="Patient ID" />
+          <TableColumn fx:id="colPatientName" prefWidth="306.39990997314453" text="Patient Name" />
+            <TableColumn fx:id="colPatientAge" prefWidth="113.60006713867188" text="Age" />
+            <TableColumn fx:id="colPatientPhoneNo" prefWidth="196.0" text="Phone No" />
+            <TableColumn fx:id="colPatientGender" prefWidth="181.5999755859375" text="Gender" />
+            <TableColumn fx:id="colPatientAddress" prefWidth="247.199951171875" text="Address" />
+            <TableColumn fx:id="colPatientTherapyProgram" prefWidth="312.800048828125" text="Therapy Program" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>
