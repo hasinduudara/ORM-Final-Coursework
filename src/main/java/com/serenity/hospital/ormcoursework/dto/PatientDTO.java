@@ -16,4 +16,8 @@ public class PatientDTO {
     private String Gender;
     private String Address;
     private String TherapyProgram;
+
+    public PatientDTO(String patientID, String patientName, String patientAge, String patientGender, String patientPhoneNo, String patientAddress) {
+
+    }
 }

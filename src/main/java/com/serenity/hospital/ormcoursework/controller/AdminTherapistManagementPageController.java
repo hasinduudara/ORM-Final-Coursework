@@ -108,20 +108,7 @@ public class AdminTherapistManagementPageController implements Initializable {
                 "Group Therapy Sessions",
                 "Family Counseling"
         );
-
-//        loadTherapyProgramNames();
-
     }
-
-//    private void loadTherapyProgramNames() {
-//        try {
-//            List<String> programNames = therapyProgramBO.getAllTherapyProgramNames();
-//            ComBoxTherapyProgram.setItems(FXCollections.observableArrayList(programNames));
-//        } catch (Exception e) {
-//            showAlert("Error loading therapy programs: " + e.getMessage());
-//            e.printStackTrace();
-//        }
-//    }
 
 
     private void generateNewId() {

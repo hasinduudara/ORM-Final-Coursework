@@ -38,13 +38,15 @@
             </Pane>
          </children>
       </Pane>
-      <Pane layoutX="24.0" layoutY="79.0" prefHeight="204.0" prefWidth="1452.0" style="-fx-background-radius: 20; -fx-background-color: #f0f0f0; -fx-border-radius: 20;" />
+      <Pane layoutX="24.0" layoutY="79.0" prefHeight="204.0" prefWidth="1452.0" style="-fx-background-radius: 20; -fx-background-color: #f0f0f0; -fx-border-radius: 20;">
+         <children>
+            <Label fx:id="lblPatientManagementPatientID" layoutX="125.0" layoutY="25.0" prefHeight="36.0" prefWidth="190.0" style="-fx-border-color: #666666;" />
+         </children></Pane>
       <Label layoutX="38.0" layoutY="106.0" text="Patient ID :">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="txtPatientManagementPatientID" layoutX="149.0" layoutY="102.0" prefHeight="36.0" prefWidth="190.0" style="-fx-border-color: #666666;" />
       <Label layoutX="382.0" layoutY="106.0" text="Name :">
          <font>
             <Font name="System Bold" size="18.0" />
